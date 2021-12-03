@@ -1,3 +1,5 @@
+const { portProducts } = require("./data/products.json");
+
 module.exports = function(app) {
   app.get("/ping", (req, res) => {
     res.sendStatus(200);
@@ -11,17 +13,15 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     res.render("index");
   });
-  
- app.get("/produto", (req, res) => {
-    res.render("productDetails");
-  });/*
+
   app.get("/produto/:id", (req, res) => {
-    const productInfos = {
-      
-    }
-    res.render("productDetails", productInfos);
+    const productDetails = portProducts.filter(item => {
+      if (item.id == req.params.id) return item;
+    });
+    console.log(productDetails)
+    res.render("productDetails", productDetails);
   });
-*/
+
   app.get("*", (req, res) => {
     res.sendStatus("404");
   });
