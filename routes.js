@@ -14,18 +14,18 @@ module.exports = function(app) {
     res.render("index");
   });
 
-  app.get("/produto", (req, res) => {
+  app.get("/produto/:id", (req, res) => {
     const productDetails = portProducts.filter(item => {
-      if (item.id == req.params) return item[0];
+      if (item.id == req.params.id) return item;
     });
     res.render("productDetails", {
-      "id": productDetails.id,
-      "name": productDetails.name,
-      "category": productDetails.category,
-      "client": productDetails.client,
-      "data": productDetails.data,
-      "photos": productDetails.photos,
-      "details": productDetails.details
+      "b_id": productDetails[0].id,
+      "b_name": productDetails[0].name,
+      "b_category": productDetails[0].category,
+      "b_client": productDetails[0].client,
+      "b_data": productDetails[0].data,
+      "b_photos": productDetails[0].photos,
+      "b_details": productDetails[0].details
     });
   });
 
