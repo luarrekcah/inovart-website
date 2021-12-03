@@ -14,12 +14,19 @@ module.exports = function(app) {
     res.render("index");
   });
 
-  app.get("/produto/:id", (req, res) => {
+  app.get("/produto", (req, res) => {
     const productDetails = portProducts.filter(item => {
-      if (item.id == req.params.id) return item;
+      if (item.id == req.params) return item[0];
     });
-    console.log(productDetails)
-    res.render("productDetails", productDetails);
+    res.render("productDetails", {
+      "id": productDetails.id,
+      "name": productDetails.name,
+      "category": productDetails.category,
+      "client": productDetails.client,
+      "data": productDetails.data,
+      "photos": productDetails.photos,
+      "details": productDetails.details
+    });
   });
 
   app.get("*", (req, res) => {
