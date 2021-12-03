@@ -8,11 +8,21 @@ module.exports = function(app) {
     );
   });
 
-  app.get("/", function(req, res) {
+  app.get("/", (req, res) => {
     res.render("index");
   });
-
-  app.get("*", function(req, res) {
+  
+ app.get("/produto", (req, res) => {
+    res.render("productDetails");
+  });/*
+  app.get("/produto/:id", (req, res) => {
+    const productInfos = {
+      
+    }
+    res.render("productDetails", productInfos);
+  });
+*/
+  app.get("*", (req, res) => {
     res.sendStatus("404");
   });
 };
