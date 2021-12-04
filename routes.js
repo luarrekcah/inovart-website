@@ -30,12 +30,11 @@ module.exports = app => {
   });
 
   app.get("/produto/:id", (req, res) => {
-    /*const productDetails = portProducts.filter(item => {
+    const productDetails = portProducts.filter(item => {
       if (item.id == req.params.id) return item;
     });
-  */
-
-    res.render("produto");
+  
+    res.render("produto", productDetails[0]);
   });
 
   app.get("*", (req, res) => {

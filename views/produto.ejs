@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - Knight Bootstrap Template</title>
+  <title>Produto</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://cdn.glitch.me/a81e3a0e-1158-4a11-bdef-9d223f8f0432%2Ffavicon.png?v=1638629191585" rel="icon">
+  <link href="https://cdn.glitch.me/a81e3a0e-1158-4a11-bdef-9d223f8f0432%2Ffavicon.png?v=1638629191585" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -1757,10 +1757,10 @@ section {
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfoio Details</h2>
+          <h2>Detalhes de produto</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Portfoio Details</li>
+            <li><a href="/">Home</a></li>
+            <li>Detalhes do produto</li>
           </ol>
         </div>
 
@@ -1778,15 +1778,15 @@ section {
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+                  <img src="<%= photos[0] %>" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
+                  <img src="<%= photos[0] %>" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
+                  <img src="<%= photos[0] %>" alt="">
                 </div>
 
               </div>
@@ -1798,16 +1798,16 @@ section {
             <div class="portfolio-info">
               <h3>Informações de produto</h3>
               <ul>
-               <!-- <li><strong>Categoria</strong>: <= b_category %></li>
-                <li><strong>Cliente</strong>: <= b_client %></li>
-                <li><strong>Data de finalização</strong>: <= b_data %></li>-->
+             <li><strong>Categoria</strong>: <%= category %></li>
+                <li><strong>Cliente</strong>: <%= client %></li>
+                <li><strong>Data de finalização</strong>: <%= data %></li>
               
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>Descrição</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+               <%= desc %>
               </p>
             </div>
           </div>
