@@ -187,20 +187,22 @@
         data-aos-delay="100"
       >
         <div class="swiper-wrapper">
+          <% for(let i =0; i < b_ops.length; i++) { %>
           <div class="swiper-slide">
             <div class="testimonial-item">
               <p>
-                Opinião
+                <%= b_ops[i].op %>
               </p>
               <img
-                src="assets/img/testimonials/testimonials-1.jpg"
+                src="<%= b_ops[i].foto %>"
                 class="testimonial-img"
                 alt=""
               />
-              <h3>Nome</h3>
-              <h4>Cargo</h4>
+              <h3><%= b_ops[i].nome %></h3>
+              <h4><%= b_ops[i].cargo %></h4>
             </div>
           </div>
+          <% } %>
           <!-- End testimonial item -->
         </div>
         <div class="swiper-pagination"></div>
