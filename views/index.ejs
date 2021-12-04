@@ -167,7 +167,7 @@
             </div>
           </div>
         </div>
-        <%} %>
+        <% } %>
 
       </div>
     </div>
@@ -263,56 +263,68 @@
   </section>
   <!-- End Clients Section -->
 
-  <!-- ======= Pricing Section ======= -->
-  <section id="pricing" class="pricing section-bg">
-    <div class="container">
-      <div class="section-title" data-aos="fade-up">
-        <h2>Valores</h2>
-        <p>
-          Logo abaixo você pode fazer uma simulação do tipo de produto que
-          deseja e realizar o pedido.
-        </p>
+ <!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing section-bg">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Valores</h2>
+      <p>
+        Logo abaixo você pode fazer uma simulação do tipo de produto que deseja
+        e realizar o pedido.
+      </p>
+    </div>
+
+    <div class="row" data-aos="fade-up">
+      <!--Simulador e botão de pedido-->
+      <h2>
+        Orçamento aproximado por medida
+      </h2>
+      <p>
+        Obs: o resultado abaixo é o valor mais próximo ao valor final, entre em
+        contato para pedir um orçamento exato. É gratuito!
+      </p>
+      <div class="form-floating" style="padding-left: 5px">
+        <select
+          class="form-select"
+          id="floatingSelect"
+          aria-label="Tipo de produto"
+          id="selectProductType"
+        >
+          <option selected>Lona + Ferro (fachada completa)</option>
+          <option value="1">Banner</option>
+          <option value="2">Adesivo</option>
+          <option value="3">Perfurado</option>
+          <option value="4">Lona</option>
+        </select>
+        <label for="floatingSelect">Selecione o tipo de produto:</label>
       </div>
 
-      <div class="row"  data-aos="fade-up">
-        <!--Simulador e botão de pedido-->
-        
-        <h2>
-          Orçamento aproximado por medida
-        </h2>
-        <p>
-     Obs: o resultado abaixo é o valor mais próximo ao valor final, entre em contato para pedir um orçamento exato. É gratuito!
-        </p>
-        <div class="form-floating" style="padding-left: 5px">
-  <select class="form-select" id="floatingSelect" aria-label="Floating label select example" >
-    <option selected>Fachada</option>
-    <option value="1">Banner</option>
-    <option value="2">Adesivo</option>
-    <option value="3">Perfurado</option>
-  </select>
-  <label for="floatingSelect">Selecione o tipo de produto:</label>
-</div>
-        
-        <p>
-          
-        </p>
-      
-       
-        <div class="input-group mb-3">
-  <input type="number" class="form-control" placeholder="largura em centímetros" aria-label="largura">
-  <span class="input-group-text">X</span>
-  <input type="number" class="form-control" placeholder="altura em centímetros" aria-label="Server">
-</div>
-        <button type="button" class="btn btn-secondary">Calcular</button>
-        <p>
-          
-        </p>
-      <button type="button" class="btn btn-success">Fazer pedido</button>
-        <!---->
+      <p></p>
+
+      <div class="input-group mb-3">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="largura em centímetros"
+          aria-label="largura"
+        />
+        <span class="input-group-text">X</span>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="altura em centímetros"
+          aria-label="Server"
+        />
       </div>
+      <button type="button" class="btn btn-secondary" id="calcOrc">Calcular</button>
+      <p></p>
+      <button type="button" class="btn btn-success" id="makeP">Fazer pedido</button>
+      <!---->
     </div>
-  </section>
-  <!-- End Pricing Section -->
+  </div>
+</section>
+<!-- End Pricing Section -->
+
 
   <!-- ======= Frequently Asked Questions Section ======= -->
   <section id="faq" class="faq">
@@ -447,6 +459,18 @@
   
   ${document.getElementById("contactMessage").value}`;
   });
+  
+  const produtType = document.getElementById("floatingSelect"), calcButton = document.getElementById("calcOrc");
+  
+  calcButton.addEventListener("click", () => {
+    let multiplicador = 0;
+    if(produtType.selectedIndex == 0) multiplicador = 180
+    if(produtType.selectedIndex == 1) multiplicador = 100
+    if(produtType.selectedIndex == 2) multiplicador = 100
+    if(produtType.selectedIndex == 3) multiplicador = 100
+    if(produtType.selectedIndex == 4) multiplicador = 100
+  });
+  
 </script>
 
 <%- include('partials/footer.ejs')-%>
