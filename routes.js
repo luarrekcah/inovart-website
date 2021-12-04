@@ -8,7 +8,8 @@ const basicData = {
   b_phoneNumber: "+55 68 9226-0660",
   b_linkWpp: "556892260660",
   b_email: "henriquemaia235@gmail.com",
-  b_cnpj: "NULL"
+  b_cnpj: "NULL",
+  b_produtos: portProducts
 };
 
 module.exports = app => {
