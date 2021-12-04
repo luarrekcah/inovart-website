@@ -4,7 +4,10 @@ const process = require("process");
 const { portProducts } = require("./data/products.json");
 
 const basicData = {
-  b_phoneNumber: "+556892260660"
+  b_phoneNumber: "+55 68 9226-0660",
+  b_linkWpp: ,
+  b_email: "henriquemaia235@gmail.com",
+  
 };
 
 module.exports = app => {

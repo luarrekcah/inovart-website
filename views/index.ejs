@@ -401,7 +401,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/sendMessage.js" method="post" role="form" class="php-email-form" data-aos="fade-left">
+            <form role="form" class="php-email-form" data-aos="fade-left">
               <div class="row">
                 <div class="form-group mt-3">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" required>
@@ -409,17 +409,9 @@
                 
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Título" required>
+                <textarea class="form-control" name="message" rows="5" id="contactMessage" placeholder="Mensagem" required></textarea>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Enviar Mensagem</button></div>
+              <div class="text-center"><button type="submit" id="contactSend">Enviar Mensagem</button></div>
             </form>
 
           </div>
@@ -431,5 +423,15 @@
 
   </main><!-- End #main -->
 
+
+<script>
+document.getElementById("contactSend").addEventListener("click", () => {
+  if(document.getElementById('name').value == '' || document.getElementById('contactMessage').value == '') return;
+  
+  location.href = `https://api.whatsapp.com/send?phone=556899499019&text=Olá, me chamo ${document.getElementById('name').value}.
+  
+  ${document.getElementById('contactMessage').value}`
+});
+</script>
 
 <%- include('partials/footer.ejs')-%>
