@@ -323,7 +323,7 @@
       </div>
       <button type="button" class="btn btn-secondary" id="calcOrc">Calcular</button>
       <p></p>
-      <button type="button" class="btn btn-success" id="makeP">Fazer pedido</button>
+      <button type="button" class="btn btn-success" id="makeP" style="display:none">Fazer pedido</button>
       <!---->
     </div>
   </div>
@@ -465,7 +465,7 @@
   ${document.getElementById("contactMessage").value}`;
   });
   
-  const produtType = document.getElementById("floatingSelect"), 
+  const productType = document.getElementById("floatingSelect"), 
         calcButton = document.getElementById("calcOrc"),
         larg = document.getElementById("larg"),
         alt = document.getElementById("alt")
@@ -482,11 +482,11 @@
    
     if(verifyInputs()) {
       let multiplicador = 0;
-    if(produtType.selectedIndex == 0) multiplicador = 180
-    if(produtType.selectedIndex == 1) multiplicador = 100
-    if(produtType.selectedIndex == 2) multiplicador = 100
-    if(produtType.selectedIndex == 3) multiplicador = 100
-    if(produtType.selectedIndex == 4) multiplicador = 100
+    if(productType.selectedIndex == 0) multiplicador = 180
+    if(productType.selectedIndex == 1) multiplicador = 100
+    if(productType.selectedIndex == 2) multiplicador = 100
+    if(productType.selectedIndex == 3) multiplicador = 100
+    if(productType.selectedIndex == 4) multiplicador = 100
     
     const resultadoNum = (alt.value * larg.value) * multiplicador;
       
@@ -495,11 +495,19 @@
         <h2 style="color: green;">Valor aproximado - R$${resultadoNum}</h2>
         `;
       document.getElementById("resultado").style.display = 'block';
+      document.getElementById("makeP").style.display = 'block';
     } else {
       alert("Preencha os campos de altura e largura.")
     }
-    
   });
+  
+   document.getElementById("makeP").addEventListener("click", () => {
+     
+     location.href = `https://api.whatsapp.com/send?phone=<%= b_linkWpp %>&text=Olá, selecionei no site ${
+      productType.value
+    }. Com as medidas de ${larg.value}m de largura e ${alt.value}m de altura.`;
+     
+   })
   
 </script>
 
