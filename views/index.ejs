@@ -307,6 +307,7 @@
           class="form-control"
           placeholder="largura em centímetros"
           aria-label="largura"
+               id="larg"
         />
         <span class="input-group-text">X</span>
         <input
@@ -314,7 +315,11 @@
           class="form-control"
           placeholder="altura em centímetros"
           aria-label="Server"
+               id="alt"
         />
+      </div>
+      <div style="display: none padding: 20px" id="resultado">
+       
       </div>
       <button type="button" class="btn btn-secondary" id="calcOrc">Calcular</button>
       <p></p>
@@ -460,15 +465,41 @@
   ${document.getElementById("contactMessage").value}`;
   });
   
-  const produtType = document.getElementById("floatingSelect"), calcButton = document.getElementById("calcOrc");
+  const produtType = document.getElementById("floatingSelect"), 
+        calcButton = document.getElementById("calcOrc"),
+        larg = document.getElementById("larg").value,
+        alt = document.getElementById("alt").value
+  
+  const verifyInputs = () => {
+    if(larg == "" || alt = "") {
+    return false;
+    } else {
+      return true;
+    }
+  }
   
   calcButton.addEventListener("click", () => {
-    let multiplicador = 0;
+    console.log("clicado")
+    
+    if(verifyInputs(larg, alt)) {
+      let multiplicador = 0;
     if(produtType.selectedIndex == 0) multiplicador = 180
     if(produtType.selectedIndex == 1) multiplicador = 100
     if(produtType.selectedIndex == 2) multiplicador = 100
     if(produtType.selectedIndex == 3) multiplicador = 100
     if(produtType.selectedIndex == 4) multiplicador = 100
+    
+    const resultado = (alt.toNumber() * larg.toNumber()) * multiplicador;
+      
+      document.getElementById("resultado").innerHTML += 
+        `
+        <h2>R$${resultado}</h2>
+        `;
+      document.getElementById("resultado").style.display = 'block';
+    } else {
+      alert("Preencha os campos de altura e largura.")
+    }
+    
   });
   
 </script>
