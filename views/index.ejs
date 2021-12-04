@@ -380,19 +380,19 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>henriquemaia235@gmail.com</p>
+                <p><%= b_email %></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Número:</h4>
-                <p>+55 68 9226-0660</p>
+                <p><%= b_phoneNumber %></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-building"></i>
                 <h4>CNPJ:</h4>
-                <p>000000000000000</p>
+                <p><%= b_cnpj %></p>
               </div>
 
             </div>
@@ -428,7 +428,7 @@
 document.getElementById("contactSend").addEventListener("click", () => {
   if(document.getElementById('name').value == '' || document.getElementById('contactMessage').value == '') return;
   
-  location.href = `https://api.whatsapp.com/send?phone=556899499019&text=Olá, me chamo ${document.getElementById('name').value}.
+  location.href = `https://api.whatsapp.com/send?phone=<%= b_linkWpp %>&text=Olá, me chamo ${document.getElementById('name').value}.
   
   ${document.getElementById('contactMessage').value}`
 });
