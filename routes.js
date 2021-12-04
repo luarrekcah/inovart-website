@@ -1,5 +1,6 @@
 const bodyParser = require("body-parser");
 const process = require("process");
+const ejs = require('ejs')
 
 const { portProducts } = require("./data/products.json");
 
@@ -28,7 +29,7 @@ module.exports = app => {
     res.render("index", basicData);
   });
 
-  app.get("/produto", (req, res) => {
+  app.get("/produto/:id", (req, res) => {
     /*const productDetails = portProducts.filter(item => {
       if (item.id == req.params.id) return item;
     });
