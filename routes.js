@@ -25,30 +25,13 @@ module.exports = app => {
     res.render("index");
   });
 
-  app.get("/produto/:id", (req, res) => {
+  app.get("/produto", (req, res) => {
     /*const productDetails = portProducts.filter(item => {
       if (item.id == req.params.id) return item;
     });
-    res.render("productDetails", {
-      /*b_id: productDetails[0].id,
-      b_name: productDetails[0].name,
-      b_category: productDetails[0].category,
-      b_client: productDetails[0].client,
-      b_data: productDetails[0].data,
-      b_photos: productDetails[0].photos,
-      b_details: productDetails[0].details
-      b_category: "aa",
-      b_client: "bb", 
-      b_data: "cc"
-    });*/
-    
-    res.render('produto', {
-      inviteLinkBot: 'https://discord.com/oauth2/authorize?client_id=743841329334845530&scope=bot&permissions=8/',
-      inviteLinkServer: 'https://discord.gg/pv2KBzeyq2',
-      usersLength: 8994,
-      guildsLength: 129,
-      cmdsLength: 10
-    });
+  */
+
+    res.render("produto");
   });
 
   app.get("*", (req, res) => {
