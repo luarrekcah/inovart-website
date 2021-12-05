@@ -2001,6 +2001,65 @@
                 </div>
                 <!--cartao visita -->
                 
+                 <!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing section-bg">
+  <div class="container">
+    <div class="row" data-aos="fade-up">
+      <!--Simulador e botão de pedido-->
+      <h2>
+        Orçamento aproximado por medida
+      </h2>
+      <p>
+        Obs: o resultado abaixo é o valor mais próximo ao valor final, entre em
+        contato para pedir um orçamento exato. É gratuito!
+      </p>
+      <div class="form-floating" style="padding-left: 5px">
+        <select
+          class="form-select"
+          id="floatingSelect"
+          aria-label="Tipo de produto"
+          id="selectProductType"
+        >
+          <option selected>Lona + Ferro (fachada completa)</option>
+          <option value="1">Banner</option>
+          <option value="2">Adesivo</option>
+          <option value="3">Perfurado</option>
+          <option value="4">Lona</option>
+        </select>
+        <label for="floatingSelect">Selecione o tipo de produto:</label>
+      </div>
+
+      <p></p>
+
+      <div class="input-group mb-3">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="largura em metros"
+          aria-label="largura"
+               id="larg"
+        />
+        <span class="input-group-text">X</span>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="altura em metros"
+          aria-label="Server"
+               id="alt"
+        />
+      </div>
+      <div style="display: none padding: 20px" id="resultado">
+       
+      </div>
+      <button type="button" class="btn btn-secondary" id="calcOrc">Calcular</button>
+      <p></p>
+      
+      <!---->
+    </div>
+  </div>
+</section>
+<!-- End Pricing Section -->
+                
               </div>
               <div class="portfolio-description">
                 <h2 style="display: <%=itens.basicInfos %>">Descrição</h2>
@@ -2368,6 +2427,46 @@
           });
         });
       })();
+    </script>
+    <script>
+    const productType = document.getElementById("floatingSelect"),
+  calcButton = document.getElementById("calcOrc"),
+  larg = document.getElementById("larg"),
+  alt = document.getElementById("alt");
+
+const verifyInputs = () => {
+  if (
+    document.getElementById("larg").value == "" ||
+    document.getElementById("alt").value == ""
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+calcButton.addEventListener("click", () => {
+  if (verifyInputs()) {
+    let multiplicador = 0;
+    if (productType.selectedIndex == 0) multiplicador = 180;
+    if (productType.selectedIndex == 1) multiplicador = 100;
+    if (productType.selectedIndex == 2) multiplicador = 100;
+    if (productType.selectedIndex == 3) multiplicador = 100;
+    if (productType.selectedIndex == 4) multiplicador = 90;
+
+    const resultadoNum = alt.value * larg.value * multiplicador;
+
+    document.getElementById("resultado").innerHTML = `
+        <h2 style="color: green;">Valor aproximado - R$${resultadoNum}</h2>
+        `;
+    document.getElementById("resultado").style.display = "block";
+    
+  } else {
+    alert("Preencha os campos de altura e largura.");
+  }
+});
+
+
     </script>
   </body>
 </html>
