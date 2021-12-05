@@ -114,6 +114,19 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
+  
+  let buttonOrc = select('.buttonOrc')
+  if (buttonOrc) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        buttonOrc.classList.add('active')
+      } else {
+        buttonOrc.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleBacktotop)
+    onscroll(document, toggleBacktotop)
+  }
 
   /**
    * Mobile nav toggle

@@ -41,10 +41,17 @@
 </div>
 
 <style>
-  
-  .buttonOrc{
-    position:fixed;bottom:10px;left:13px;margin:0;padding:5px 3px; background:#7cc576; border-radius: 4px
-;
+  .buttonOrc {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 996;
+    bottom: 10px;
+    left: 13px;
+    margin: 0;
+    padding: 5px 3px;
+    background: #7cc576;
+    border-radius: 4px;
     transition: all 0.4s;
   }
 
@@ -53,6 +60,7 @@
     opacity: 1;
   }
 </style>
+
 
 <div class="buttonOrc">
   <a href="#pricing"><button type="button" class="btn btn-ligth" style="color:white;">Quero fazer um orçamento!</button></a>
