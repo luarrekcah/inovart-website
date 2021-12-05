@@ -1824,7 +1824,7 @@
                 ><span>Produtos</span> <i class="bi bi-chevron-down"></i
               ></a>
               <ul>
-                <li class="dropdown">
+                <!--<li class="dropdown">
                   <a href="#"
                     ><span>Papel</span> <i class="bi bi-chevron-right"></i
                   ></a>
@@ -1834,7 +1834,7 @@
                       <a href="/produto/tipo/cartao-visita">Cartão visita</a>
                     </li>
                   </ul>
-                </li>
+                </li>-->
                 <li class="dropdown">
                   <a href="#"
                     ><span>Lona</span> <i class="bi bi-chevron-right"></i
@@ -1923,10 +1923,11 @@
                     <li><strong><%= source %></strong>: <%= sourceDesc %></li>
                   </ul>
                 </div>
-
-                <table
+                <!--cartao visita -->
+                <div style="display:<%=itens.tableCards %>">
+                  <table
                   class="table"
-                  style="display:<%=itens.tableCards %>; width:100%;"
+                  style="display:table; width:100%;"
                 >
                   <thead>
                     <tr>
@@ -1964,6 +1965,20 @@
                     `;
                   }
                 </script>
+                  
+                  <div class="form-floating" style="padding-left: 5px">
+                   <select class="form-select" id="floatingSelect" aria-label="Tipo de produto">
+                     <option selected="">a</option>
+                     <option value="1">a</option>
+                     <option value="2">a</option>
+                     <option value="3">a</option>
+                     <option value="4">a</option>
+                   </select>
+                   <label for="floatingSelect">Material:</label>
+                 </div>
+                </div>
+                <!--cartao visita -->
+                
               </div>
               <div class="portfolio-description">
                 <h2 style="display: <%=itens.basicInfos %>">Descrição</h2>
@@ -2013,12 +2028,8 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-6">
-              <a href="/" class="scrollto footer-logo"
-                ><img
-                  src="https://cdn.glitch.me/a81e3a0e-1158-4a11-bdef-9d223f8f0432%2Ffavicon.png?v=1638629191585"
-                  alt=""
-              /></a>
-              <h3>InovArt</h3>
+              <a href="/" ><img src="https://cdn.glitch.me/a81e3a0e-1158-4a11-bdef-9d223f8f0432%2Flogo-comp-inovart.png?v=1638722316672" width="250px" alt=""></a>
+             
               <p>Sua empresa, em destaque.</p>
             </div>
           </div>

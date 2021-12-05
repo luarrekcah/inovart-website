@@ -62,7 +62,7 @@ module.exports = app => {
         floatingLabel: "Insira abaixo a quantia de cartões:",
         itens: {
           basicInfos: "none",
-          tableCards: "table"
+          tableCards: "block"
         }
       };
     } else if (query == "fachada") {
