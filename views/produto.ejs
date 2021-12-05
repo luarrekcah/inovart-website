@@ -1854,10 +1854,13 @@ section {
               <p>
                <%= details %>
               </p>
-              <hr>
+              <hr>  <b>
+                   <%= floatingLabel %>
+                 </b>
                <div class="form-floating mb-3">
-  <input type="text" class="form-control" id="floatingInput" placeholder="" lines="10">
-  <label for="floatingInput"><% floatingLabel %></label>
+               
+  <input type="text" class="form-control" id="floatingInput" placeholder="Insira os dados aqui" >
+  <label for="floatingInput">Insira os dados aqui</label>
 </div>
               <button type="button" class="btn btn-success" style="width:100%">Fazer pedido</button>
             </div>

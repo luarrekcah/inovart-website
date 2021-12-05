@@ -51,28 +51,128 @@ module.exports = app => {
         "source":"Valor preto e branco",
         "sourceDesc":"R$0,50",
         "details": "Orçamento com base na quantidade de folhas necessárias",
-        "floatingLabel": "Quantas folhas você deseja e de qual cor?"
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     } else if (query == "cartao-visita") {
-      return {};
+      return {
+        name: "Cartão Visita",
+        photos: ["https://carvalhoprintoffice.com.br/wp-content/uploads/2017/09/100-modelos-de-cart%C3%A3o-de-visita-para-se-inspirar-muito-1-900x600.png"],
+        category: "Other",
+        "titleValue": "Valor milheiro",
+        "value": "R$500,00",
+        "source":"Valor UNID",
+        "sourceDesc":"R$10,00",
+        "details": "Orçamento com base na quantidade de cartões necessários",
+        "floatingLabel": "Insira abaixo a quantia de cartões:"
+      };
     } else if (query == "fachada") {
-      return {};
+      return {
+        name: "",
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        category: "Other",
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+      };
     } else if (query == "banner") {
-      return {};
+      return {
+        name: "",
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        category: "Other",
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+      };
     } else if (query == "cavalete") {
-      return {};
+      return {
+        name: "",
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        category: "Other",
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+      };
     } else if (query == "outdoor") {
-      return {};
+      return {
+        name: "",
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        category: "Other",
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+      };
     } else if (query == "adesivo-comum") {
-      return {};
+      return {
+        name: "",
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        category: "Other",
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+      };
     } else if (query == "adesivo-perfurado") {
-      return {};
+      return {
+        name: "",
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        category: "Other",
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+      };
     } else if (query == "logotipo") {
-      return {};
+      return {
+        name: "",
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        category: "Other",
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+      };
     } else if (query == "arte-digital") {
-      return {};
+      return {
+        name: "",
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        category: "Other",
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+      };
     } else {
-      return {};
+      return {
+        name: "",
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        category: "Other",
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+      };
     }
   };
 
