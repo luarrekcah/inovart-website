@@ -100,7 +100,7 @@ module.exports = app => {
         name: "Cavalete",
         photos: ["https://img.freepik.com/psd-gratuitas/quadro-metalico-e-cavalete-de-madeira-com-maquete-de-lona_23-2149045658.jpg?size=626&ext=jpg"],
         category: "Cavalete",
-        "titleValue": "Valor do m² ferro",
+        "titleValue": "Valor do m² ferro e lona",
         "value": "R$"+defaultValues.lonaEstrutura,
         "source":"Valor do m² lona",
         "sourceDesc":"R$"+defaultValues.lona,
@@ -110,50 +110,50 @@ module.exports = app => {
     } else if (query == "outdoor") {
       return {
         name: "Outdoor",
-        photos: [""],
-        category: "",
-        "titleValue": "",
-        "value": "",
-        "source":"",
-        "sourceDesc":"",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+        photos: ["https://www.mockupworld.co/wp-content/uploads/2015/07/Outdoor-Advertinsing-MockUps_4.jpg"],
+        category: "Outdoor",
+        "titleValue": "Valor do m² ferro e lona",
+        "value": "R$"+defaultValues.lonaEstrutura,
+        "source":"Valor do m² lona",
+        "sourceDesc":"R$"+defaultValues.lona,
+          "details": "Orçamento com base nas medidas necessárias",
+        "floatingLabel": "Insira abaixo as medidas, como largura e altura:"
       };
     } else if (query == "adesivo-comum") {
       return {
-        name: "",
-        photos: [""],
-        category: "",
-        "titleValue": "",
-        "value": "",
-        "source":"",
-        "sourceDesc":"",
-        "details": "",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+        name: "Adesivo comum",
+        photos: ["https://img.freepik.com/psd-gratuitas/maquete-de-adesivo-redondo_68185-317.jpg?size=338&ext=jpg"],
+        category: "Other",
+        "titleValue": "Valor do m² adesivo",
+        "value": "R$100",
+        "source":"Tipo",
+        "sourceDesc":"Grandes e pequenos",
+        "details": "Orçamento com base nas medidas e quantidades.",
+        "floatingLabel": "Insira abaixo as medidas e quantias de adesivos:"
       };
     } else if (query == "adesivo-perfurado") {
       return {
-        name: "",
-        photos: [""],
-        category: "",
-        "titleValue": "",
-        "value": "",
-        "source":"",
-        "sourceDesc":"",
-        "details": "",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+       name: "Adesivo perfurado",
+        photos: ["https://images.tcdn.com.br/img/img_prod/372162/110_1_20140325180455.jpg"],
+        category: "Other",
+        "titleValue": "Valor do m²",
+        "value": "R$100 - (para carros o valor é R$90 único)",
+        "source":"Tipo",
+        "sourceDesc":"Grandes e pequenos",
+        "details": "Orçamento com base nas medidas ou, valor único para automoveis.",
+        "floatingLabel": "Insira abaixo as medidas:"
       };
     } else if (query == "logotipo") {
       return {
-        name: "",
-        photos: [""],
-        category: "",
-        "titleValue": "",
-        "value": "",
-        "source":"",
-        "sourceDesc":"",
-        "details": "",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+        name: "Logotipo",
+        photos: ["https://img.freepik.com/free-psd/logo-mockup-grey-wall_35913-2122.jpg?size=626&ext=jpg"],
+        category: "Other",
+        "titleValue": "Tipo",
+        "value": "Refazer/Fazer logotipo",
+        "source":"Valor",
+        "sourceDesc":"orçamento no Whatsapp",
+        "details": "orçamento no Whatsapp",
+        "floatingLabel": "Insira abaixo sua ideia:"
       };
     } else if (query == "arte-digital") {
       return {
