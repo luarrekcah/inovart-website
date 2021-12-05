@@ -80,109 +80,19 @@
 
       <div class="row">
         <div class="col-lg-6 order-2 order-lg-1">
-         <a href="/produto/tipo/logotipo">
+          
+          <% for(let i = 0; i<b_services.length; i++) { %>
+         <a href="<%=b_services[i].link%>">
             <div class="icon-box mt-5 mt-lg-0 buttonPressed" data-aos="fade-up" style="    border: solid #7cc576;
-    border-width: 1 
-px
-; border-radius: 20px" >
+    border-width: 1px; border-radius: 20px; margin-bottom: 20px" >
             <i class="bi bi-caret-right"></i>
-            <h4 style="color:#555555">Logotipo</h4>
+            <h4 style="color:#555555"><%=b_services[i].name%></h4>
             <p>
-              Ter uma imagem para representar sua empresa é de extrema
-              importância para seu negócio e clientes.
+              <%=b_services[i].desc%>
             </p>
-              
           </div>
         </a>
-          <a href="/produto/tipo/fachada">
-          <div class="icon-box mt-5 buttonPressed" data-aos="fade-up" data-aos-delay="100"     style="    border: solid #7cc576;
-    border-width: 1 
-px
-; border-radius: 20px" >
-           <i class="bi bi-caret-right "></i>
-            <h4 style="color:#555555">Fachada</h4>
-            <p>
-              Além da arte também imprimimos, utilizando os
-              melhores materiais para garantir resistência e qualidade.
-            </p>
-          </div>
-          </a>
-          
-          <a href="/produto/tipo/banner">
-          <div class="icon-box mt-5 buttonPressed" data-aos="fade-up" data-aos-delay="200"    style="    border: solid #7cc576;
-    border-width: 1 
-px
-; border-radius: 20px" >
-            <i class="bi bi-caret-right "></i>
-            <h4 style="color:#555555">Banner</h4>
-            <p>Totalmente personalizável para atender sua necessidade</p>
-          </div>
-          </a>
-          
-          <a href="/produto/tipo/cavalete">
-          <div class="icon-box mt-5 buttonPressed" data-aos="fade-up" data-aos-delay="300"   style="    border: solid #7cc576;
-    border-width: 1 
-px
-; border-radius: 20px" >
-            <i class="bi bi-caret-right "></i>
-            <h4 style="color:#555555">Cavalete</h4>
-            <p>Indicador de rua para seu estabelecimento</p>
-          </div>
-          </a>
-          
-          <a href="/produto/tipo/cartao-visita">
-          <div class="icon-box mt-5 buttonPressed" data-aos="fade-up" data-aos-delay="300"  style="    border: solid #7cc576;
-    border-width: 1 
-px
-; border-radius: 20px" >
-            <i class="bi bi-caret-right "></i>
-            <h4 style="color:#555555">Cartão de visita</h4>
-            <p>Utilizado para anotações e contato para seu cliente</p>
-          </div>
-          </a>
-          
-          <a href="/produto/tipo/adesivo-comum">
-          <div class="icon-box mt-5 buttonPressed" data-aos="fade-up" data-aos-delay="300"  style="    border: solid #7cc576;
-    border-width: 1 
-px
-; border-radius: 20px" >
-            <i class="bi bi-caret-right "></i>
-            <h4 style="color:#555555">Adesivo</h4>
-            <p>Adesivo comum, sem furos, usados geralmente para envelope</p>
-          </div>
-          </a>
-          
-          <a href="/produto/tipo/adesivo-perfurado">
-          <div class="icon-box mt-5 buttonPressed" data-aos="fade-up" data-aos-delay="300"  style="    border: solid #7cc576;
-    border-width: 1 
-px
-; border-radius: 20px" >
-            <i class="bi bi-caret-right "></i>
-            <h4 style="color:#555555">Adesivo Perfurado</h4>
-            <p>Utilizado geralmente em vidros de automóveis e estabelecimentos</p>
-          </div>
-          </a>
-          
-          
-          <!--<a href="/produto/tipo/impressora-plotter">
-          <div class="icon-box mt-5 buttonPressed" data-aos="fade-up" data-aos-delay="300"  style="    border: solid #7cc576;
-    border-width: 1 
-px
-; border-radius: 20px" >
-            <i class="bi bi-caret-right "></i>
-            <h4 style="color:#555555">Impressora plotter</h4>
-            <p>Compre sua impressora plotter conosco, os melhores valores</p>
-          </div>
-          </a>-->
-          
-          <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300" style="    border: solid #7cc576;
-    border-width: 1 
-px
-; border-radius: 20px" >
-            <i class="bi bi-caret-right "></i>
-            <h4>E muito mais!</h4>
-            <p>Entre em contato agora</p>
-          </div>
+          <% } %>
         </div>
         <div
           class="image col-lg-6 order-1 order-lg-2"
@@ -420,42 +330,19 @@ px
       </div>
 
       <ul class="faq-list">
+        <% for(let i = 0; i<b_faq.length; i++) { %>
         <li data-aos="fade-up">
-          <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1"
-            >Qual é o tipo de lona? <i class="bx bx-chevron-down icon-show"></i
+          <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq<%=i%>"
+            ><%=b_faq[i].pergunta%> <i class="bx bx-chevron-down icon-show"></i
             ><i class="bx bx-x icon-close"></i
           ></a>
-          <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+          <div id="faq<%=i%>" class="collapse" data-bs-parent=".faq-list">
             <p>
-              A mais resistente do mercado, 440g de espessura, 2 anos de garantia.
+             <%=b_faq[i].resp%>
             </p>
           </div>
         </li>
-        <li data-aos="fade-up">
-          <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq2"
-            >Vocês fazem a arte e imprimem?
-            <i class="bx bx-chevron-down icon-show"></i
-            ><i class="bx bx-x icon-close"></i
-          ></a>
-          <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-            <p>
-              Sim, desde a visita técnica ou negociação virtual, até sua arte e
-              material instalado.
-            </p>
-          </div>
-        </li>
-        <li data-aos="fade-up">
-          <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq3"
-            >Será que vou gostar da arte?
-            <i class="bx bx-chevron-down icon-show"></i
-            ><i class="bx bx-x icon-close"></i
-          ></a>
-          <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-            <p>
-              Só vamos imprimir seu material depois de sua autorização, a arte está aberta a modificações e sugestões.
-            </p>
-          </div>
-        </li>
+          <% } %>
       </ul>
     </div>
   </section>
