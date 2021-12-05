@@ -347,15 +347,40 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 
+@keyframes colors {
+  
+  from {background: linear-gradient(137deg, rgb(50 177 176) 0%, #ea6960 100%);}
+  to {background: linear-gradient(131deg, rgb(50 177 176) 0%, #ea6960 100%);}
+  
+  /*0% {
+    background: linear-gradient(137deg, rgb(50 177 176) 0%, #ea6960 100%);
+  }
+  25% {
+    background: linear-gradient(241deg, rgb(50 177 176) 0%, #ea6960 100%);
+  }
+  50% {
+    background: linear-gradient(326deg, rgb(50 177 176) 0%, #ea6960 100%);
+  }
+  75% {
+    background: linear-gradient(58deg, rgb(50 177 176) 0%, #ea6960 100%);
+  }
+  100% {
+    background: linear-gradient(131deg, rgb(50 177 176) 0%, #ea6960 100%);
+  }*/
+}
+
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("https://cdn.glitch.me/a81e3a0e-1158-4a11-bdef-9d223f8f0432%2F43290a9b-d7c3-47d2-ae06-4dbbdd0ccc2b.image.png?v=1638730456702");
+  background: linear-gradient(137deg, rgb(50 177 176) 0%, #ea6960 100%);
+   animation-name: colors;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
   position: relative;
   background-position: center center;
   background-size: cover;
 }
-
 
 #hero::before {
   content: "";
