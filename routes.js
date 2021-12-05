@@ -68,7 +68,8 @@ module.exports = app => {
         floatingLabel: "Insira abaixo a quantia de cartões:",
         itens: {
           basicInfos: "none",
-          tableCards: "block"
+          tableCards: "block",
+          tableOrc: "none"
         }
       };
     } else if (query == "fachada") {
@@ -87,7 +88,8 @@ module.exports = app => {
           "Insira abaixo as medidas, como largura e altura, e se deseja com estrutura ou sem:",
         itens: {
           basicInfos: "block",
-          tableCards: "none"
+          tableCards: "none",
+          tableOrc: "block"
         }
       };
     } else if (query == "banner") {
@@ -106,7 +108,8 @@ module.exports = app => {
         floatingLabel: "Insira abaixo as medidas, como largura e altura:",
         itens: {
           basicInfos: "block",
-          tableCards: "none"
+          tableCards: "none",
+          tableOrc: "banner"
         }
       };
     } else if (query == "cavalete") {
@@ -131,7 +134,8 @@ OBS: duas estruturas metálicas, lona frente e verso
         floatingLabel: "Insira abaixo as medidas, como largura e altura:",
         itens: {
           basicInfos: "block",
-          tableCards: "none"
+          tableCards: "none",
+          tableOrc: "block"
         }
       };
     } else if (query == "outdoor") {
@@ -149,7 +153,8 @@ OBS: duas estruturas metálicas, lona frente e verso
         floatingLabel: "Insira abaixo as medidas, como largura e altura:",
         itens: {
           basicInfos: "block",
-          tableCards: "none"
+          tableCards: "none",
+          tableOrc: "block"
         }
       };
     } else if (query == "adesivo-comum") {
@@ -167,7 +172,8 @@ OBS: duas estruturas metálicas, lona frente e verso
         floatingLabel: "Insira abaixo as medidas e quantias de adesivos:",
         itens: {
           basicInfos: "block",
-          tableCards: "none"
+          tableCards: "none",
+          tableOrc: "block"
         }
       };
     } else if (query == "adesivo-perfurado") {
@@ -186,7 +192,8 @@ OBS: duas estruturas metálicas, lona frente e verso
         floatingLabel: "Insira abaixo as medidas:",
         itens: {
           basicInfos: "block",
-          tableCards: "none"
+          tableCards: "none",
+          tableOrc: "block"
         }
       };
     } else if (query == "logotipo") {
@@ -224,7 +231,8 @@ OBS: duas estruturas metálicas, lona frente e verso
           "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
         itens: {
           basicInfos: "block",
-          tableCards: "none"
+          tableCards: "none",
+          tableOrc: "none"
         }
       };
     } else if (query == "impressora-plotter") {
@@ -243,26 +251,11 @@ OBS: duas estruturas metálicas, lona frente e verso
           "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
         itens: {
           basicInfos: "none",
-          tableCards: "none"
+          tableCards: "none",
+          tableOrc: "none"
         }
       };
-    } else {
-      return {
-        name: "",
-        photos: [""],
-        category: "",
-        titleValue: "",
-        value: "",
-        source: "",
-        sourceDesc: "",
-        details: "",
-        floatingLabel: "Insira abaixo a quantia de folhas e cor que precisa:",
-        itens: {
-          basicInfos: "block",
-          tableCards: "none"
-        }
-      };
-    }
+    } 
   };
 
   app.get("/produto/tipo/:type", (req, res) => {
