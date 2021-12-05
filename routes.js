@@ -104,16 +104,7 @@ module.exports = app => {
         "value": "R$"+defaultValues.lonaEstrutura,
         "source":"Valor do m² lona",
         "sourceDesc":"R$"+defaultValues.lona,
-        "details": `Em vez de (obs) colocar três botões da seguinte maneira 
-
-<b>CAVALETE SIMPLES</b> OBS: apenas uma estrutura, porém lona frente e verso 
-
-<b>CAVALETE DUPLO</b>
-OBS: duas estruturas metálicas, lona frente e verso 
-
-<b>CAVALETE COM ILHÓS</b>
-
-OBS: uma ou duas estruturas metálicas, lona frente e verso com enforca gato`,
+        "details": `<p> + "aa" + <p>`,
         "floatingLabel": "Insira abaixo as medidas, como largura e altura:"
       };
     } else if (query == "outdoor") {

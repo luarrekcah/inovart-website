@@ -1850,9 +1850,11 @@ section {
             </div>
             <div class="portfolio-description">
               <h2>Descrição</h2>
-              <p>
-               <%= details %>
-              </p>
+              <div id="details">
+              </div>
+              <script>
+                document.getElementById("details").innerHTML = `<%=details%> `
+                </script>
               <hr>  <b>
                    <%= floatingLabel %>
                  </b>
