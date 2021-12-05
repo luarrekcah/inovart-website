@@ -5,7 +5,8 @@ const ejs = require("ejs");
 const { portProducts } = require("./data/products.json"),
   { ops } = require("./data/opinioes.json"),
   { services } = require("./data/services.json"),
-  { faq } = require("./data/faq.json");
+  { faq } = require("./data/faq.json"),
+      { logos } = require("./data/clientLogos.json");
 
 const basicData = {
   b_phoneNumber: "+55 68 9226-0660",
@@ -15,7 +16,8 @@ const basicData = {
   b_produtos: portProducts,
   b_ops: ops,
   b_services: services,
-  b_faq: faq
+  b_faq: faq,
+  b_clientLogos: logos
 };
 
 module.exports = app => {
