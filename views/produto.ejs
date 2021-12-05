@@ -1840,6 +1840,7 @@ section {
 
           <div class="col-lg-4">
             <div class="portfolio-info">
+              <div 
               <h3>Informações de produto</h3>
               <ul>
              <li><strong>Categoria</strong>: <%= category %></li>
@@ -1847,7 +1848,7 @@ section {
                 <li><strong><%= source %></strong>: <%= sourceDesc %></li>
               
               </ul>
-              <table class="table" style="display:block width:100%">
+              <table class="table" style="display:<%=itens.tableCards %> width:100%">
                 <thead>
                   <tr>
                     <th scope="col">Quant.</th>

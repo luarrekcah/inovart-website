@@ -59,7 +59,11 @@ module.exports = app => {
         source: ".",
         sourceDesc: ".",
         details: "Orçamento com base na quantidade de cartões necessários",
-        floatingLabel: "Insira abaixo a quantia de cartões:"
+        floatingLabel: "Insira abaixo a quantia de cartões:",
+        itens: {
+          basicInfos: "none",
+          tableCards: "block"
+        }
       };
     } else if (query == "fachada") {
       return {
@@ -74,7 +78,11 @@ module.exports = app => {
         sourceDesc: "R$" + defaultValues.lona,
         details: "Orçamento com base nas medidas necessárias",
         floatingLabel:
-          "Insira abaixo as medidas, como largura e altura, e se deseja com estrutura ou sem:"
+          "Insira abaixo as medidas, como largura e altura, e se deseja com estrutura ou sem:",
+        itens: {
+          basicInfos: "block",
+          tableCards: "none"
+        }
       };
     } else if (query == "banner") {
       return {
@@ -89,7 +97,11 @@ module.exports = app => {
         sourceDesc: "+R$20",
         details:
           "Orçamento com base nas medidas necessárias e materiais a serem utilizados",
-        floatingLabel: "Insira abaixo as medidas, como largura e altura:"
+        floatingLabel: "Insira abaixo as medidas, como largura e altura:",
+        itens: {
+          basicInfos: "block",
+          tableCards: "none"
+        }
       };
     } else if (query == "cavalete") {
       return {
@@ -110,7 +122,11 @@ CAVALETE DUPLO
 OBS: duas estruturas metálicas, lona frente e verso 
 
 `,
-        floatingLabel: "Insira abaixo as medidas, como largura e altura:"
+        floatingLabel: "Insira abaixo as medidas, como largura e altura:",
+        itens: {
+          basicInfos: "block",
+          tableCards: "none"
+        }
       };
     } else if (query == "outdoor") {
       return {
@@ -124,7 +140,11 @@ OBS: duas estruturas metálicas, lona frente e verso
         source: "Valor do m² lona",
         sourceDesc: "R$" + defaultValues.lona,
         details: "Orçamento com base nas medidas necessárias",
-        floatingLabel: "Insira abaixo as medidas, como largura e altura:"
+        floatingLabel: "Insira abaixo as medidas, como largura e altura:",
+        itens: {
+          basicInfos: "block",
+          tableCards: "none"
+        }
       };
     } else if (query == "adesivo-comum") {
       return {
@@ -138,7 +158,11 @@ OBS: duas estruturas metálicas, lona frente e verso
         source: "Tipo",
         sourceDesc: "Grandes e pequenos",
         details: "Orçamento com base nas medidas e quantidades.",
-        floatingLabel: "Insira abaixo as medidas e quantias de adesivos:"
+        floatingLabel: "Insira abaixo as medidas e quantias de adesivos:",
+        itens: {
+          basicInfos: "block",
+          tableCards: "none"
+        }
       };
     } else if (query == "adesivo-perfurado") {
       return {
@@ -153,7 +177,11 @@ OBS: duas estruturas metálicas, lona frente e verso
         sourceDesc: "Grandes e pequenos",
         details:
           "Orçamento com base nas medidas ou, valor único para automoveis.",
-        floatingLabel: "Insira abaixo as medidas:"
+        floatingLabel: "Insira abaixo as medidas:",
+        itens: {
+          basicInfos: "block",
+          tableCards: "none"
+        }
       };
     } else if (query == "logotipo") {
       return {
@@ -168,7 +196,11 @@ OBS: duas estruturas metálicas, lona frente e verso
         sourceDesc: "orçamento no Whatsapp",
         details:
           "Entre em contato no Whatsapp e apresente seu pedido para que possamos passar um orçamento confiável dependendo da necessidade.",
-        floatingLabel: "Insira abaixo sua ideia/informações do pedido:"
+        floatingLabel: "Insira abaixo sua ideia/informações do pedido:",
+        itens: {
+          basicInfos: "block",
+          tableCards: "none"
+        }
       };
     } else if (query == "arte-digital") {
       return {
@@ -183,7 +215,11 @@ OBS: duas estruturas metálicas, lona frente e verso
         sourceDesc: "Artes digitais gerais",
         details: "Entre em contato para realizar um orçamento",
         floatingLabel:
-          "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer"
+          "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
+        itens: {
+          basicInfos: "block",
+          tableCards: "none"
+        }
       };
     } else {
       return {
@@ -195,7 +231,11 @@ OBS: duas estruturas metálicas, lona frente e verso
         source: "",
         sourceDesc: "",
         details: "",
-        floatingLabel: "Insira abaixo a quantia de folhas e cor que precisa:"
+        floatingLabel: "Insira abaixo a quantia de folhas e cor que precisa:",
+        itens: {
+          basicInfos: "block",
+          tableCards: "none"
+        }
       };
     }
   };
