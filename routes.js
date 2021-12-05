@@ -41,6 +41,12 @@ module.exports = app => {
   });
 
   const productType = query => {
+    const defaultValues = {
+      lona: "90",
+      lonaEstrutura: "120",
+      flyer: "40",
+      logo: "100"
+    }
     if (query == "a4") {
       return {
         name: "Impressão A4",
@@ -50,7 +56,7 @@ module.exports = app => {
         "value": "R$1,00",
         "source":"Valor preto e branco",
         "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "details": "Orçamento com base na quantia de folhar necessárias",
         "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     } else if (query == "cartao-visita") {
@@ -67,110 +73,110 @@ module.exports = app => {
       };
     } else if (query == "fachada") {
       return {
-        name: "",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
-        category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+        name: "Fachada",
+        photos: ["https://img.freepik.com/psd-gratuitas/maquete-de-outdoor-vertical-de-grande-escala-minima_53876-65947.jpg?size=626&ext=jpg"],
+        category: "Fachada",
+        "titleValue": "Valor do m² com estrutura",
+        "value": "R$"+defaultValues.lonaEstrutura,
+        "source":"Valor do m² apenas lona",
+        "sourceDesc":"R$"+defaultValues.lona,
+        "details": "Orçamento com base nas medidas necessárias",
+        "floatingLabel": "Insira abaixo as medidas, como largura e altura, e se deseja com estrutura ou sem:"
       };
     } else if (query == "banner") {
       return {
-        name: "",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
-        category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+        name: "Banner",
+        photos: ["https://mockuptree.com/wp-content/uploads/edd/2020/09/free-lamp-post-banner-mockup-960x640.jpg"],
+        category: "Banner",
+        "titleValue": "Valor do m²",
+        "value": "R$"+defaultValues.lona,
+        "source":"Adicional de materiais restantes",
+        "sourceDesc":"+R$20",
+        "details": "Orçamento com base nas medidas necessárias e materiais a serem utilizados",
+        "floatingLabel": "Insira abaixo as medidas, como largura e altura:"
       };
     } else if (query == "cavalete") {
       return {
-        name: "",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
-        category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+        name: "Cavalete",
+        photos: ["https://img.freepik.com/psd-gratuitas/quadro-metalico-e-cavalete-de-madeira-com-maquete-de-lona_23-2149045658.jpg?size=626&ext=jpg"],
+        category: "Cavalete",
+        "titleValue": "Valor do m² ferro",
+        "value": "R$"+defaultValues.lonaEstrutura,
+        "source":"Valor do m² lona",
+        "sourceDesc":"R$"+defaultValues.lona,
+        "details": "Obs: São necessários duas lonas e uma estrutura para o cavalete.",
+        "floatingLabel": "Insira abaixo as medidas, como largura e altura:"
       };
     } else if (query == "outdoor") {
       return {
-        name: "",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
-        category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
+        name: "Outdoor",
+        photos: [""],
+        category: "",
+        "titleValue": "",
+        "value": "",
+        "source":"",
+        "sourceDesc":"",
         "details": "Orçamento com base na quantidade de folhas necessárias",
         "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     } else if (query == "adesivo-comum") {
       return {
         name: "",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
-        category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
+        photos: [""],
+        category: "",
+        "titleValue": "",
+        "value": "",
+        "source":"",
+        "sourceDesc":"",
+        "details": "",
         "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     } else if (query == "adesivo-perfurado") {
       return {
         name: "",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
-        category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
+        photos: [""],
+        category: "",
+        "titleValue": "",
+        "value": "",
+        "source":"",
+        "sourceDesc":"",
+        "details": "",
         "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     } else if (query == "logotipo") {
       return {
         name: "",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
-        category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
+        photos: [""],
+        category: "",
+        "titleValue": "",
+        "value": "",
+        "source":"",
+        "sourceDesc":"",
+        "details": "",
         "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     } else if (query == "arte-digital") {
       return {
         name: "",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
-        category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
+        photos: [""],
+        category: "",
+        "titleValue": "",
+        "value": "",
+        "source":"",
+        "sourceDesc":"",
+        "details": "",
         "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     } else {
       return {
         name: "",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
-        category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantidade de folhas necessárias",
+        photos: [""],
+        category: "",
+        "titleValue": "",
+        "value": "",
+        "source":"",
+        "sourceDesc":"",
+        "details": "",
         "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     }
