@@ -46,147 +46,170 @@ module.exports = app => {
       lonaEstrutura: "180",
       flyer: "40",
       logo: "100"
-    }
+    };
     if (query == "a4") {
       return {
         name: "Impressão A4",
-        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
+        photos: [
+          "https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"
+        ],
         category: "Other",
-        "titleValue": "Valor colorido da UNID",
-        "value": "R$1,00",
-        "source":"Valor preto e branco",
-        "sourceDesc":"R$0,50",
-        "details": "Orçamento com base na quantia de folhar necessárias",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+        titleValue: "Valor colorido da UNID",
+        value: "R$1,00",
+        source: "Valor preto e branco",
+        sourceDesc: "R$0,50",
+        details: "Orçamento com base na quantia de folhar necessárias",
+        floatingLabel: "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     } else if (query == "cartao-visita") {
       return {
         name: "Cartão Visita",
-        photos: ["https://carvalhoprintoffice.com.br/wp-content/uploads/2017/09/100-modelos-de-cart%C3%A3o-de-visita-para-se-inspirar-muito-1-900x600.png"],
+        photos: [
+          "https://carvalhoprintoffice.com.br/wp-content/uploads/2017/09/100-modelos-de-cart%C3%A3o-de-visita-para-se-inspirar-muito-1-900x600.png"
+        ],
         category: "Other",
-        "titleValue": "Valor milheiro",
-        "value": "R$170,00",
-        "source":".",
-        "sourceDesc":".",
-        "details": "Orçamento com base na quantidade de cartões necessários",
-        "floatingLabel": "Insira abaixo a quantia de cartões:"
+        titleValue: "Valor milheiro",
+        value: "R$170,00",
+        source: ".",
+        sourceDesc: ".",
+        details: "Orçamento com base na quantidade de cartões necessários",
+        floatingLabel: "Insira abaixo a quantia de cartões:"
       };
     } else if (query == "fachada") {
       return {
         name: "Fachada",
-        photos: ["https://img.freepik.com/psd-gratuitas/maquete-de-outdoor-vertical-de-grande-escala-minima_53876-65947.jpg?size=626&ext=jpg"],
+        photos: [
+          "https://img.freepik.com/psd-gratuitas/maquete-de-outdoor-vertical-de-grande-escala-minima_53876-65947.jpg?size=626&ext=jpg"
+        ],
         category: "Fachada",
-        "titleValue": "Valor do m² com estrutura",
-        "value": "R$"+defaultValues.lonaEstrutura,
-        "source":"Valor do m² apenas lona",
-        "sourceDesc":"R$"+defaultValues.lona,
-        "details": "Orçamento com base nas medidas necessárias",
-        "floatingLabel": "Insira abaixo as medidas, como largura e altura, e se deseja com estrutura ou sem:"
+        titleValue: "Valor do m² com estrutura",
+        value: "R$" + defaultValues.lonaEstrutura,
+        source: "Valor do m² apenas lona",
+        sourceDesc: "R$" + defaultValues.lona,
+        details: "Orçamento com base nas medidas necessárias",
+        floatingLabel:
+          "Insira abaixo as medidas, como largura e altura, e se deseja com estrutura ou sem:"
       };
     } else if (query == "banner") {
       return {
         name: "Banner",
-        photos: ["https://mockuptree.com/wp-content/uploads/edd/2020/09/free-lamp-post-banner-mockup-960x640.jpg"],
+        photos: [
+          "https://mockuptree.com/wp-content/uploads/edd/2020/09/free-lamp-post-banner-mockup-960x640.jpg"
+        ],
         category: "Banner",
-        "titleValue": "Valor do m²",
-        "value": "R$"+defaultValues.lona,
-        "source":"Adicional de materiais restantes",
-        "sourceDesc":"+R$20",
-        "details": "Orçamento com base nas medidas necessárias e materiais a serem utilizados",
-        "floatingLabel": "Insira abaixo as medidas, como largura e altura:"
+        titleValue: "Valor do m²",
+        value: "R$" + defaultValues.lona,
+        source: "Adicional de materiais restantes",
+        sourceDesc: "+R$20",
+        details:
+          "Orçamento com base nas medidas necessárias e materiais a serem utilizados",
+        floatingLabel: "Insira abaixo as medidas, como largura e altura:"
       };
     } else if (query == "cavalete") {
       return {
         name: "Cavalete",
-        photos: ["https://img.freepik.com/psd-gratuitas/quadro-metalico-e-cavalete-de-madeira-com-maquete-de-lona_23-2149045658.jpg?size=626&ext=jpg"],
+        photos: [
+          "https://img.freepik.com/psd-gratuitas/quadro-metalico-e-cavalete-de-madeira-com-maquete-de-lona_23-2149045658.jpg?size=626&ext=jpg"
+        ],
         category: "Cavalete",
-        "titleValue": "Valor do m² ferro e lona",
-        "value": "R$"+defaultValues.lonaEstrutura,
-        "source":"Valor do m² lona",
-        "sourceDesc":"R$"+defaultValues.lona,
-        "details": `Em vez de (obs) colocar três botões da seguinte maneira 
+        titleValue: "Valor do m² ferro e lona",
+        value: "R$" + defaultValues.lonaEstrutura,
+        source: "Valor do m² lona",
+        sourceDesc: "R$" + defaultValues.lona,
+        details: `
 
 CAVALETE SIMPLES OBS: apenas uma estrutura, porém lona frente e verso 
 
 CAVALETE DUPLO
 OBS: duas estruturas metálicas, lona frente e verso 
 
-CAVALETE COM ILHÓS
-
-OBS: uma ou duas estruturas metálicas, lona frente e verso com enforca gato`,
-        "floatingLabel": "Insira abaixo as medidas, como largura e altura:"
+`,
+        floatingLabel: "Insira abaixo as medidas, como largura e altura:"
       };
     } else if (query == "outdoor") {
       return {
         name: "Outdoor",
-        photos: ["https://www.mockupworld.co/wp-content/uploads/2015/07/Outdoor-Advertinsing-MockUps_4.jpg"],
+        photos: [
+          "https://www.mockupworld.co/wp-content/uploads/2015/07/Outdoor-Advertinsing-MockUps_4.jpg"
+        ],
         category: "Outdoor",
-        "titleValue": "Valor do m² ferro e lona",
-        "value": "R$"+defaultValues.lonaEstrutura,
-        "source":"Valor do m² lona",
-        "sourceDesc":"R$"+defaultValues.lona,
-          "details": "Orçamento com base nas medidas necessárias",
-        "floatingLabel": "Insira abaixo as medidas, como largura e altura:"
+        titleValue: "Valor do m² ferro e lona",
+        value: "R$" + defaultValues.lonaEstrutura,
+        source: "Valor do m² lona",
+        sourceDesc: "R$" + defaultValues.lona,
+        details: "Orçamento com base nas medidas necessárias",
+        floatingLabel: "Insira abaixo as medidas, como largura e altura:"
       };
     } else if (query == "adesivo-comum") {
       return {
         name: "Adesivo comum",
-        photos: ["https://img.freepik.com/psd-gratuitas/maquete-de-adesivo-redondo_68185-317.jpg?size=338&ext=jpg"],
+        photos: [
+          "https://img.freepik.com/psd-gratuitas/maquete-de-adesivo-redondo_68185-317.jpg?size=338&ext=jpg"
+        ],
         category: "Other",
-        "titleValue": "Valor do m² adesivo",
-        "value": "R$90",
-        "source":"Tipo",
-        "sourceDesc":"Grandes e pequenos",
-        "details": "Orçamento com base nas medidas e quantidades.",
-        "floatingLabel": "Insira abaixo as medidas e quantias de adesivos:"
+        titleValue: "Valor do m² adesivo",
+        value: "R$90",
+        source: "Tipo",
+        sourceDesc: "Grandes e pequenos",
+        details: "Orçamento com base nas medidas e quantidades.",
+        floatingLabel: "Insira abaixo as medidas e quantias de adesivos:"
       };
     } else if (query == "adesivo-perfurado") {
       return {
-       name: "Adesivo perfurado",
-        photos: ["https://images.tcdn.com.br/img/img_prod/372162/110_1_20140325180455.jpg"],
+        name: "Adesivo perfurado",
+        photos: [
+          "https://images.tcdn.com.br/img/img_prod/372162/110_1_20140325180455.jpg"
+        ],
         category: "Other",
-        "titleValue": "Valor do m²",
-        "value": "R$90 - (para carros o valor é R$90 único)",
-        "source":"Tipo",
-        "sourceDesc":"Grandes e pequenos",
-        "details": "Orçamento com base nas medidas ou, valor único para automoveis.",
-        "floatingLabel": "Insira abaixo as medidas:"
+        titleValue: "Valor do m²",
+        value: "R$90 - (para carros o valor é R$90 único)",
+        source: "Tipo",
+        sourceDesc: "Grandes e pequenos",
+        details:
+          "Orçamento com base nas medidas ou, valor único para automoveis.",
+        floatingLabel: "Insira abaixo as medidas:"
       };
     } else if (query == "logotipo") {
       return {
         name: "Logotipo",
-        photos: ["https://img.freepik.com/free-psd/logo-mockup-grey-wall_35913-2122.jpg?size=626&ext=jpg"],
+        photos: [
+          "https://img.freepik.com/free-psd/logo-mockup-grey-wall_35913-2122.jpg?size=626&ext=jpg"
+        ],
         category: "Other",
-        "titleValue": "Tipo",
-        "value": "Refazer/Fazer logotipo",
-        "source":"Valor",
-        "sourceDesc":"orçamento no Whatsapp",
-        "details": "Entre em contato no Whatsapp e apresente seu pedido para que possamos passar um orçamento confiável dependendo da necessidade.",
-        "floatingLabel": "Insira abaixo sua ideia/informações do pedido:"
+        titleValue: "Tipo",
+        value: "Refazer/Fazer logotipo",
+        source: "Valor",
+        sourceDesc: "orçamento no Whatsapp",
+        details:
+          "Entre em contato no Whatsapp e apresente seu pedido para que possamos passar um orçamento confiável dependendo da necessidade.",
+        floatingLabel: "Insira abaixo sua ideia/informações do pedido:"
       };
     } else if (query == "arte-digital") {
       return {
         name: "Flyer",
-        photos: ["https://img.elo7.com.br/product/original/3C93B54/mockup-celular-para-arte-digital-arte-para-sublimacao.jpg"],
+        photos: [
+          "https://img.elo7.com.br/product/original/3C93B54/mockup-celular-para-arte-digital-arte-para-sublimacao.jpg"
+        ],
         category: "Other",
-        "titleValue": "Valor arte digital",
-        "value": "R$" + defaultValues.flyer,
-        "source":"Tipo",
-        "sourceDesc":"Artes digitais gerais",
-        "details": "Entre em contato para realizar um orçamento",
-        "floatingLabel": "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer"
+        titleValue: "Valor arte digital",
+        value: "R$" + defaultValues.flyer,
+        source: "Tipo",
+        sourceDesc: "Artes digitais gerais",
+        details: "Entre em contato para realizar um orçamento",
+        floatingLabel:
+          "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer"
       };
     } else {
       return {
         name: "",
         photos: [""],
         category: "",
-        "titleValue": "",
-        "value": "",
-        "source":"",
-        "sourceDesc":"",
-        "details": "",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+        titleValue: "",
+        value: "",
+        source: "",
+        sourceDesc: "",
+        details: "",
+        floatingLabel: "Insira abaixo a quantia de folhas e cor que precisa:"
       };
     }
   };
