@@ -152,20 +152,20 @@ module.exports = app => {
         "value": "Refazer/Fazer logotipo",
         "source":"Valor",
         "sourceDesc":"orçamento no Whatsapp",
-        "details": "orçamento no Whatsapp",
-        "floatingLabel": "Insira abaixo sua ideia:"
+        "details": "Entre em contato no Whatsapp e apresente seu pedido para que possamos passar um orçamento confiável dependendo da necessidade.",
+        "floatingLabel": "Insira abaixo sua ideia/informações do pedido:"
       };
     } else if (query == "arte-digital") {
       return {
-        name: "",
-        photos: [""],
-        category: "",
-        "titleValue": "",
-        "value": "",
-        "source":"",
-        "sourceDesc":"",
-        "details": "",
-        "floatingLabel": "Insira abaixo a quantia de folhas e cor que precisa:"
+        name: "Flyer",
+        photos: ["https://img.elo7.com.br/product/original/3C93B54/mockup-celular-para-arte-digital-arte-para-sublimacao.jpg"],
+        category: "Other",
+        "titleValue": "Valor arte digital",
+        "value": "R$" + defaultValues.flyer,
+        "source":"Tipo",
+        "sourceDesc":"Artes digitais gerais",
+        "details": "Entre em contato para realizar um orçamento",
+        "floatingLabel": "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer"
       };
     } else {
       return {
