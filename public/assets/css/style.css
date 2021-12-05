@@ -335,8 +335,21 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.png");
+  background: url("https://cdn.glitch.me/a81e3a0e-1158-4a11-bdef-9d223f8f0432%2F43290a9b-d7c3-47d2-ae06-4dbbdd0ccc2b.image.png?v=1638730456702");
   position: relative;
+  background-position: center center;
+  background-size: cover;
+}
+
+#hero::before {
+  content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
 }
 
 #hero .hero-container {
@@ -351,6 +364,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   text-align: center;
   padding: 0 15px;
+  z-index: 2
 }
 
 #hero .hero-logo {
