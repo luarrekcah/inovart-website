@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Detalhes - <%=name%></title>
+  <title>Tipo de produto - <%=name%></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -1809,10 +1809,10 @@ section {
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Detalhes de produto -  <%=name%></h2>
+          <h2>Tipo de produto -  <%=name%></h2>
           <ol>
             <li><a href="/">Home</a></li>
-            <li>Detalhes do produto</li>
+            <li>Tipo de produto</li>
           </ol>
         </div>
 
@@ -1844,8 +1844,8 @@ section {
               <h3>Informações de produto</h3>
               <ul>
              <li><strong>Categoria</strong>: <%= category %></li>
-                <li><strong>Cliente</strong>: <%= client %></li>
-                <li><strong>Data de finalização</strong>: <%= data %></li>
+                <li><strong><%= titleValue %></strong>: <%= value %></li>
+                <li><strong><%= source %></strong>: <%= sourceDesc %></li>
               
               </ul>
             </div>

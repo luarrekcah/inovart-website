@@ -1,6 +1,6 @@
 const bodyParser = require("body-parser");
 const process = require("process");
-const ejs = require('ejs')
+const ejs = require("ejs");
 
 const { portProducts } = require("./data/products.json");
 const { ops } = require("./data/opinioes.json");
@@ -36,13 +36,44 @@ module.exports = app => {
     const productDetails = portProducts.filter(item => {
       if (item.id == req.params.id) return item;
     });
-  
+
     res.render("produto", productDetails[0]);
   });
-  
-  app.get("/produto/tipo/:tipo", (req, res) => {
-    const tipo = req.params.tipo;
-    res.render("produtos");
+
+  const productType = query => {
+    if (query == "a4") {
+      return {
+        name: "Impressão A4",
+        photos: [""],
+        category: "Other",
+        "titleValue": "Valor da UNID",
+        
+      };
+    } else if (query == "cartao-visita") {
+      return {};
+    } else if (query == "fachada") {
+      return {};
+    } else if (query == "banner") {
+      return {};
+    } else if (query == "cavalete") {
+      return {};
+    } else if (query == "outdoor") {
+      return {};
+    } else if (query == "adesivo-comum") {
+      return {};
+    } else if (query == "adesivo-perfurado") {
+      return {};
+    } else if (query == "logotipo") {
+      return {};
+    } else if (query == "arte-digital") {
+      return {};
+    } else {
+      return {};
+    }
+  };
+
+  app.get("/produto/tipo/:type", (req, res) => {
+    res.render("produto", productType(req.params.type));
   });
 
   app.get("*", (req, res) => {
