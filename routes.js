@@ -43,7 +43,7 @@ module.exports = app => {
   const productType = query => {
     const defaultValues = {
       lona: "90",
-      lonaEstrutura: "120",
+      lonaEstrutura: "180",
       flyer: "40",
       logo: "100"
     }
@@ -65,9 +65,9 @@ module.exports = app => {
         photos: ["https://carvalhoprintoffice.com.br/wp-content/uploads/2017/09/100-modelos-de-cart%C3%A3o-de-visita-para-se-inspirar-muito-1-900x600.png"],
         category: "Other",
         "titleValue": "Valor milheiro",
-        "value": "R$500,00",
-        "source":"Valor UNID",
-        "sourceDesc":"R$10,00",
+        "value": "R$170,00",
+        "source":".",
+        "sourceDesc":".",
         "details": "Orçamento com base na quantidade de cartões necessários",
         "floatingLabel": "Insira abaixo a quantia de cartões:"
       };
