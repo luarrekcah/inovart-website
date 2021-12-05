@@ -2,8 +2,10 @@ const bodyParser = require("body-parser");
 const process = require("process");
 const ejs = require("ejs");
 
-const { portProducts } = require("./data/products.json");
-const { ops } = require("./data/opinioes.json");
+const { portProducts } = require("./data/products.json"),
+  { ops } = require("./data/opinioes.json"),
+  { services } = require("./data/services.json"),
+  { faq } = require("./data/faq.json");
 
 const basicData = {
   b_phoneNumber: "+55 68 9226-0660",
@@ -11,7 +13,9 @@ const basicData = {
   b_email: "henriquemaia235@gmail.com",
   b_cnpj: "NULL",
   b_produtos: portProducts,
-  b_ops: ops
+  b_ops: ops,
+  b_services: services,
+  b_faq: faq
 };
 
 module.exports = app => {

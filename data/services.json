@@ -1,0 +1,39 @@
+{
+  "services": [
+    {
+      "name": "Logotipos",
+      "desc": "Ter uma imagem para representar sua empresa é de extrema importância para seu negócio e clientes.",
+      "link": "/produto/tipo/logotipo"
+    },
+    {
+      "name": "Fachada",
+      "desc": "Além da arte também imprimimos, utilizando os melhores materiais para garantir resistência e qualidade.",
+      "link": "/produto/tipo/fachada"
+    },
+    {
+      "name": "Banner",
+      "desc": "Totalmente personalizável para atender sua necessidade",
+      "link": "/produto/tipo/banner"
+    },
+    {
+      "name": "Cavalete",
+      "desc": "Indicador de rua para seu estabelecimento",
+      "link": "/produto/tipo/cavalete"
+    },
+    {
+      "name": "Cartão de visita",
+      "desc": "Utilizado para anotações e contato para seu cliente",
+      "link": "/produto/tipo/cartao-visita"
+    },
+    {
+      "name": "Adesivo",
+      "desc": "Adesivo comum, sem furos, usados gealmente para envelope",
+      "link": "/produto/tipo/adesivo-comum"
+    },
+    {
+      "name": "Adesivo Perfurado",
+      "desc": "Utilizado geralmente em vidros de automóveis e estabelecimentos",
+      "link": "/produto/tipo/adesivo-perfurado"
+    }
+  ]
+}
