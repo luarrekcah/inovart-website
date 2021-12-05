@@ -36,22 +36,30 @@
   </footer><!-- End Footer -->
 
 
-<div class="back-to-top d-flex align-items-center justify-content-center" style="right: 0;">
-  <a href="#"><i class="bi bi-arrow-up-short"></i></a>
-</div>
-
-<div class="back-to-top d-flex align-items-center justify-content-center">
-  <a href="#"><i class="bi bi-arrow-up-short"></i></a>
-</div>
-
-
-
-
-<!--
 <div class="back-to-top d-flex align-items-center justify-content-center">
   <a href="#" ><i class="bi bi-arrow-up-short"></i></a>
 </div>
--->
+
+<style>
+  
+  .buttonOrc{
+    position:fixed;bottom:10px;left:13px;margin:0;padding:5px 3px; background:#7cc576; border-radius: 4px
+;
+    transition: all 0.4s;
+  }
+
+  .buttonOrc.active {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+<div class="buttonOrc">
+  <a href="#pricing"><button type="button" class="btn btn-ligth" style="color:white;">Quero fazer um orçamento!</button></a>
+</div>
+
+
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
