@@ -104,7 +104,16 @@ module.exports = app => {
         "value": "R$"+defaultValues.lonaEstrutura,
         "source":"Valor do m² lona",
         "sourceDesc":"R$"+defaultValues.lona,
-        "details": "Obs: São necessários duas lonas e uma estrutura para o cavalete.",
+        "details": `Em vez de (obs) colocar três botões da seguinte maneira 
+
+<b>CAVALETE SIMPLES</b> OBS: apenas uma estrutura, porém lona frente e verso 
+
+<b>CAVALETE DUPLO</b>
+OBS: duas estruturas metálicas, lona frente e verso 
+
+<b>CAVALETE COM ILHÓS</b>
+
+OBS: uma ou duas estruturas metálicas, lona frente e verso com enforca gato`,
         "floatingLabel": "Insira abaixo as medidas, como largura e altura:"
       };
     } else if (query == "outdoor") {
@@ -125,7 +134,7 @@ module.exports = app => {
         photos: ["https://img.freepik.com/psd-gratuitas/maquete-de-adesivo-redondo_68185-317.jpg?size=338&ext=jpg"],
         category: "Other",
         "titleValue": "Valor do m² adesivo",
-        "value": "R$100",
+        "value": "R$90",
         "source":"Tipo",
         "sourceDesc":"Grandes e pequenos",
         "details": "Orçamento com base nas medidas e quantidades.",
@@ -137,7 +146,7 @@ module.exports = app => {
         photos: ["https://images.tcdn.com.br/img/img_prod/372162/110_1_20140325180455.jpg"],
         category: "Other",
         "titleValue": "Valor do m²",
-        "value": "R$100 - (para carros o valor é R$90 único)",
+        "value": "R$90 - (para carros o valor é R$90 único)",
         "source":"Tipo",
         "sourceDesc":"Grandes e pequenos",
         "details": "Orçamento com base nas medidas ou, valor único para automoveis.",
