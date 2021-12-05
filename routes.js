@@ -44,10 +44,14 @@ module.exports = app => {
     if (query == "a4") {
       return {
         name: "Impressão A4",
-        photos: [""],
+        photos: ["https://cf.shopee.com.br/file/857ab78a20b7ab925f0068da40480b3a"],
         category: "Other",
-        "titleValue": "Valor da UNID",
-        
+        "titleValue": "Valor colorido da UNID",
+        "value": "R$1,00",
+        "source":"Valor preto e branco",
+        "sourceDesc":"R$0,50",
+        "details": "Orçamento com base na quantidade de folhas necessárias",
+        "floatingLabel": "Quantas folhas você deseja e de qual cor?"
       };
     } else if (query == "cartao-visita") {
       return {};
