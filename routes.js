@@ -39,6 +39,11 @@ module.exports = app => {
   
     res.render("produto", productDetails[0]);
   });
+  
+  app.get("/produto/tipo/:tipo", (req, res) => {
+    const tipo = req.params.tipo;
+    res.render("produtos");
+  });
 
   app.get("*", (req, res) => {
     res.sendStatus("404");
