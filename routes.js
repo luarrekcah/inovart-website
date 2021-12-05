@@ -212,7 +212,8 @@ OBS: duas estruturas metálicas, lona frente e verso
         floatingLabel: "Insira abaixo sua ideia/informações do pedido:",
         itens: {
           basicInfos: "block",
-          tableCards: "none"
+          tableCards: "none",
+          tableOrc: "none"
         }
       };
     } else if (query == "arte-digital") {

@@ -351,7 +351,7 @@ h6 {
   0% {
     background: linear-gradient(137deg, rgb(50 177 176) 0%, #ea6960 100%);
   }
-  25% {
+ /* 25% {
     background: linear-gradient(241deg, rgb(50 177 176) 0%, #ea6960 100%);
   }
   50% {
@@ -359,9 +359,9 @@ h6 {
   }
   75% {
     background: linear-gradient(58deg, rgb(50 177 176) 0%, #ea6960 100%);
-  }
+  }*/
   100% {
-    background: linear-gradient(131deg, rgb(50 177 176) 0%, #ea6960 100%);
+    background: linear-gradient(58deg, rgb(50 177 176) 0%, #ea6960 100%);
   }
 }
 
@@ -370,6 +370,8 @@ h6 {
   height: 100vh;
   background: linear-gradient(137deg, rgb(50 177 176) 0%, #ea6960 100%);
   /*animation: colors 5s linear 2s infinite alternate;*/
+  animation: colors 5s infinite;
+  animation-timing-function: ease-out;
   position: relative;
   background-position: center center;
   background-size: cover;
