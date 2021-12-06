@@ -2468,15 +2468,28 @@ calcButton.addEventListener("click", () => {
 });
       
       
-      itens: {
-          basicInfos: "block",
-          tableCards: "none",
-          tableOrc: "block"
+      const getCheckedValue = () => {
+        const elements = document.getElementsByClassName("form-check-input");
+        let eArray = []
+        for(let i = 0; i< elements.length;i++) {
+          eArray.push(elementes[0])
         }
+      }
       
       document.getElementById("fzrPedido").addEventListener('click', () => {
-        const infos = document.getElementById("floatingInput").value;
-        location.href = ``
+        
+        location.href = `<%= name %>
+        
+        ${document.getElementById("floatingInput").value == '' ? '' : document.getElementById("floatingInput").value}
+        
+        ${document.getElementById("floatingInput").value == '' ? '' : document.getElementById("alt").value + " X " + document.getElementById("larg").value }
+        
+        ${document.getElementById("floatingInput").style.display == 'none' ? document.getElementById("materialCard").value : ''}
+         
+        ${document.getElementById("floatingInput").style.display == 'none' ? document.getElementById("coberturaCard").value : ''}
+        
+        ${document.getElementById("floatingInput").style.display == 'none' ? document.getElementById("tamanhoCard").value : ''}
+        `
       });
 
 
