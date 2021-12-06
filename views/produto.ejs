@@ -1969,22 +1969,22 @@
                   
                   <div class="form-floating" style="padding-left: 5px; margin-bottom: 20px;">
                    <select class="form-select" id="materialCard" aria-label="Tipo de produto">
-                     <option selected="">a</option>
-                     <option value="1">b</option>
-                     <option value="2">c</option>
-                     <option value="3">d</option>
-                     <option value="4">e</option>
+                     <option selected="a">a</option>
+                     <option value="b">b</option>
+                     <option value="c">c</option>
+                     <option value="d">d</option>
+                     <option value="e">e</option>
                    </select>
                    <label for="floatingSelect">Material:</label>
                  </div>
                   
                   <div class="form-floating" style="padding-left: 5px; margin-bottom: 20px;">
                    <select class="form-select" id="coberturaCard" aria-label="Tipo de produto">
-                     <option selected="">a</option>
-                     <option value="1">b</option>
-                     <option value="2">c</option>
-                     <option value="3">d</option>
-                     <option value="4">e</option>
+                     <option selected="a">a</option>
+                     <option value="b">b</option>
+                     <option value="c">c</option>
+                     <option value="d">d</option>
+                     <option value="e">e</option>
                    </select>
                    <label for="floatingSelect">Cobertura:</label>
                  </div>
@@ -2480,10 +2480,25 @@ calcButton.addEventListener("click", () => {
         return checked;
       }
       
+      const getProductType = () => {
+        const produto = `<%= name%>`
+        if(produto.toLowerCase() == 'cartão visita') { return true } else { return false}
+      }
+      
      
       document.getElementById("fzrPedido").addEventListener('click', () => {
          const checked = getCheckedValue();
-        
+         if(getProductType) {
+           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
+           Material: ${ document.getElementById("materialCard").value };
+           Cobertura: ${document.getElementById("coberturaCard").value};
+           Tamanho: ${document.getElementById("tamanhoCard").value};
+           Desejo ${checked.value} UNIDs.
+           `
+         }
+      });
+
+      /*
         location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguintes produto: <%= name%>
         
         ${'Cartão Visita' == 'Cartão Visita' ? '' : document.getElementById("floatingSelect").value }
@@ -2499,9 +2514,7 @@ calcButton.addEventListener("click", () => {
         ${document.getElementById("floatingInput").style.display == 'none' ? document.getElementById("tamanhoCard").value : ''}
         
         ${document.getElementById("floatingInput").style.display == 'none' ? checked.value + " cartões" : ''}
-        `
-      });
-
+        `*/
 
     </script>
   </body>
