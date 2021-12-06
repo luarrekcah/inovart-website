@@ -1951,7 +1951,7 @@
                         class="form-check-input"
                         type="radio"
                         name="flexRadioDefault"
-                        id="flexRadioDefault${i}"
+                        id="valorEscolha${i}"
                       />
                       <label class="form-check-label" for="flexRadioDefault1">
                         ${i}.000
@@ -1967,7 +1967,7 @@
                 </script>
                   
                   <div class="form-floating" style="padding-left: 5px; margin-bottom: 20px;">
-                   <select class="form-select" id="floatingSelect" aria-label="Tipo de produto">
+                   <select class="form-select" id="materialCard" aria-label="Tipo de produto">
                      <option selected="">a</option>
                      <option value="1">b</option>
                      <option value="2">c</option>
@@ -1978,7 +1978,7 @@
                  </div>
                   
                   <div class="form-floating" style="padding-left: 5px; margin-bottom: 20px;">
-                   <select class="form-select" id="floatingSelect" aria-label="Tipo de produto">
+                   <select class="form-select" id="coberturaCard" aria-label="Tipo de produto">
                      <option selected="">a</option>
                      <option value="1">b</option>
                      <option value="2">c</option>
@@ -1989,7 +1989,7 @@
                  </div>
                   
                   <div class="form-floating" style="padding-left: 5px; margin-bottom: 20px;">
-                   <select class="form-select" id="floatingSelect" aria-label="Tipo de produto">
+                   <select class="form-select" id="tamanhoCard" aria-label="Tipo de produto">
                      <option selected="">a</option>
                      <option value="1">b</option>
                      <option value="2">c</option>
@@ -2086,6 +2086,7 @@
                   type="button"
                   class="btn btn-success"
                   style="width:100%"
+                        id="fzrPedido"
                 >
                   Fazer pedido
                 </button>
@@ -2465,6 +2466,18 @@ calcButton.addEventListener("click", () => {
     alert("Preencha os campos de altura e largura.");
   }
 });
+      
+      
+      itens: {
+          basicInfos: "block",
+          tableCards: "none",
+          tableOrc: "block"
+        }
+      
+      document.getElementById("fzrPedido").addEventListener('click', () => {
+        const infos = document.getElementById("floatingInput").value;
+        location.href = ``
+      });
 
 
     </script>
