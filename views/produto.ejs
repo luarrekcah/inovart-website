@@ -2488,12 +2488,21 @@ calcButton.addEventListener("click", () => {
      
       document.getElementById("fzrPedido").addEventListener('click', () => {
          const checked = getCheckedValue();
-         if(getProductType) {
+        
+         if(getProductType()) {
+           if(checked == 'undefined') return alert("Escolha alguma quantia de cartões visita")
            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
            Material: ${ document.getElementById("materialCard").value };
            Cobertura: ${document.getElementById("coberturaCard").value};
            Tamanho: ${document.getElementById("tamanhoCard").value};
            Desejo ${checked.value} UNIDs.
+           `
+         } else {
+           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
+           Largura: ${ document.getElementById("larg").value };
+           Altura: ${document.getElementById("alt").value};
+           Especificações: ${document.getElementById("floatingSelect").value};
+           Dados: ${document.getElementById("floatingInput").value}.
            `
          }
       });
