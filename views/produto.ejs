@@ -1952,6 +1952,7 @@
                         type="radio"
                         name="flexRadioDefault"
                         id="valorEscolha${i}"
+                        value="${i + ".000"}"
                       />
                       <label class="form-check-label" for="flexRadioDefault1">
                         ${i}.000
@@ -2470,15 +2471,20 @@ calcButton.addEventListener("click", () => {
       
       const getCheckedValue = () => {
         const elements = document.getElementsByClassName("form-check-input");
-        let eArray = []
+        let checked;
         for(let i = 0; i< elements.length;i++) {
-          eArray.push(elementes[0])
+          if(elements[i].checked == true) {
+            checked = elements[i];
+          } 
         }
+        return checked;
       }
       
+     
       document.getElementById("fzrPedido").addEventListener('click', () => {
+         const checked = getCheckedValue();
         
-        location.href = `<%= name %>
+        location.href = `https://api.whatsapp.com/send?phone=556892260660&text=<%= titleValue%>
         
         ${document.getElementById("floatingInput").value == '' ? '' : document.getElementById("floatingInput").value}
         
@@ -2489,6 +2495,8 @@ calcButton.addEventListener("click", () => {
         ${document.getElementById("floatingInput").style.display == 'none' ? document.getElementById("coberturaCard").value : ''}
         
         ${document.getElementById("floatingInput").style.display == 'none' ? document.getElementById("tamanhoCard").value : ''}
+        
+        ${document.getElementById("floatingInput").style.display == 'none' ? checked.value + " cartões" : ''}
         `
       });
 
