@@ -2484,7 +2484,9 @@ calcButton.addEventListener("click", () => {
       document.getElementById("fzrPedido").addEventListener('click', () => {
          const checked = getCheckedValue();
         
-        location.href = `https://api.whatsapp.com/send?phone=556892260660&text=<%= titleValue%>
+        location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguintes produto: <%= name%>
+        
+        ${'Cartão Visita' == 'Cartão Visita' ? '' : document.getElementById("floatingSelect").value }
         
         ${document.getElementById("floatingInput").value == '' ? '' : document.getElementById("floatingInput").value}
         
