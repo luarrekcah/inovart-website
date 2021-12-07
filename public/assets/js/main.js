@@ -11,11 +11,6 @@
   if (location.protocol != "https:") {
     location.protocol = "https:";
   }
-
-  
-  window.onload = () =>{
-    console.log("Preparado.")
-  }
   
   const slowLoad = window.setTimeout( function() {
         alert( "Conexão ruim com internet, o site pode apresentar falhas" );
