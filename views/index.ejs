@@ -255,6 +255,8 @@
           <option value="2">Adesivo</option>
           <option value="3">Perfurado</option>
           <option value="4">Lona</option>
+          <option value="5">Cavalete simples</option>
+          <option value="6">Cavalete duplo</option>
         </select>
         <label for="floatingSelect">Selecione o tipo de produto:</label>
       </div>
@@ -436,6 +438,8 @@
     if(productType.selectedIndex == 2) multiplicador = 100
     if(productType.selectedIndex == 3) multiplicador = 100
     if(productType.selectedIndex == 4) multiplicador = 100
+    if(productType.selectedIndex == 5) multiplicador = 100
+    if(productType.selectedIndex == 6) multiplicador = 100
     
     const resultadoNum = (alt.value * larg.value) * multiplicador;
       
