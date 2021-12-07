@@ -2465,11 +2465,11 @@ calcButton.addEventListener("click", () => {
       let resultadoNum;
       
       if(productType.selectedIndex == 5) {
-        alert('calculo cavalete simples')
-        resultadoNum = ((alt.value * larg.value) * 180) + 2 * ((alt.value * larg.value) * 100)
+       
+        resultadoNum = ((alt.value * larg.value) * 90) + 2 * ((alt.value * larg.value) * 90)
       } else if (productType.selectedIndex == 6) {
-         alert("calculo cavalete duplo")
-        resultadoNum = 2 * ((alt.value * larg.value) * 180) + 2 * ((alt.value * larg.value) * 100)
+        
+        resultadoNum = 2 * ((alt.value * larg.value) * 90) + 2 * ((alt.value * larg.value) * 90)
       } else {
         resultadoNum = (alt.value * larg.value) * multiplicador;
       }
