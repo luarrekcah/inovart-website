@@ -2501,8 +2501,13 @@ calcButton.addEventListener("click", () => {
       
       const getProductType = () => {
         const produto = `<%= name%>`
-        if(produto.toLowerCase() == 'cartão visita') { return 'cv' } else { return false}
-        if(produto.toLowerCase() == 'logotipo' || produto.toLowerCase() == 'arte digital') { return 'simple' } else { return false}
+        if(produto.toLowerCase() == 'cartão visita') { 
+          return 'cv' 
+        } else if(produto.toLowerCase() == 'logotipo' || produto.toLowerCase() == 'arte digital') {
+          return 'simple' 
+        }else { 
+          return false;
+        }
       }
       
      
@@ -2517,9 +2522,11 @@ calcButton.addEventListener("click", () => {
            Tamanho: ${document.getElementById("tamanhoCard").value};
            Desejo ${checked.value} UNIDs.
            `
-         } else if(getProductType() == 'c') {
+         } else if(getProductType() == 'simple') {
            
-           
+           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
+           Dados: ${document.getElementById("floatingInput").value}.
+           `
          } else {
            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
            Largura: ${ document.getElementById("larg").value };
