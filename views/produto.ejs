@@ -2026,6 +2026,8 @@
           <option value="2">Adesivo</option>
           <option value="3">Perfurado</option>
           <option value="4">Lona</option>
+          <option value="5">Cavalete simples</option>
+          <option value="6">Cavalete duplo</option>
         </select>
         <label for="floatingSelect">Selecione o tipo de produto:</label>
       </div>
@@ -2448,25 +2450,42 @@ const verifyInputs = () => {
 };
 
 calcButton.addEventListener("click", () => {
-  if (verifyInputs()) {
-    let multiplicador = 0;
-    if (productType.selectedIndex == 0) multiplicador = 180;
-    if (productType.selectedIndex == 1) multiplicador = 100;
-    if (productType.selectedIndex == 2) multiplicador = 100;
-    if (productType.selectedIndex == 3) multiplicador = 100;
-    if (productType.selectedIndex == 4) multiplicador = 90;
-
-    const resultadoNum = alt.value * larg.value * multiplicador;
-
-    document.getElementById("resultado").innerHTML = `
+   
+    if(verifyInputs()) {
+      let multiplicador = 0;
+    if(productType.selectedIndex == 0) multiplicador = 180
+    if(productType.selectedIndex == 1) multiplicador = 100
+    if(productType.selectedIndex == 2) multiplicador = 100
+    if(productType.selectedIndex == 3) multiplicador = 100
+    if(productType.selectedIndex == 4) multiplicador = 100
+    if(productType.selectedIndex == 5) multiplicador = 100
+    if(productType.selectedIndex == 6) multiplicador = 100
+      
+      
+      let resultadoNum;
+      
+      if(productType.selectedIndex == 5) {
+        alert('calculo cavalete simples')
+        resultadoNum = ((alt.value * larg.value) * 180) + 2 * ((alt.value * larg.value) * 100)
+      } else if (productType.selectedIndex == 6) {
+         alert("calculo cavalete duplo")
+        resultadoNum = 2 * ((alt.value * larg.value) * 180) + 2 * ((alt.value * larg.value) * 100)
+      } else {
+        resultadoNum = (alt.value * larg.value) * multiplicador;
+      }
+    
+    
+      
+      document.getElementById("resultado").innerHTML = 
+        `
         <h2 style="color: green;">Valor aproximado - R$${resultadoNum}</h2>
         `;
-    document.getElementById("resultado").style.display = "block";
-    
-  } else {
-    alert("Preencha os campos de altura e largura.");
-  }
-});
+      document.getElementById("resultado").style.display = 'block';
+      document.getElementById("makeP").style.display = 'block';
+    } else {
+      alert("Preencha os campos de altura e largura.")
+    }
+  });
       
       
       const getCheckedValue = () => {
@@ -2482,14 +2501,15 @@ calcButton.addEventListener("click", () => {
       
       const getProductType = () => {
         const produto = `<%= name%>`
-        if(produto.toLowerCase() == 'cartão visita') { return true } else { return false}
+        if(produto.toLowerCase() == 'cartão visita') { return 'cv' } else { return false}
+        if(produto.toLowerCase() == 'logotipo' || produto.toLowerCase() == 'arte digital') { return 'simple' } else { return false}
       }
       
      
       document.getElementById("fzrPedido").addEventListener('click', () => {
          const checked = getCheckedValue();
         
-         if(getProductType()) {
+         if(getProductType() == 'cv') {
            if(checked == 'undefined') return alert("Escolha alguma quantia de cartões visita")
            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
            Material: ${ document.getElementById("materialCard").value };
@@ -2497,6 +2517,9 @@ calcButton.addEventListener("click", () => {
            Tamanho: ${document.getElementById("tamanhoCard").value};
            Desejo ${checked.value} UNIDs.
            `
+         } else if(getProductType() == 'c') {
+           
+           
          } else {
            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
            Largura: ${ document.getElementById("larg").value };
