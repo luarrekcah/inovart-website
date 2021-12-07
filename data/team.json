@@ -1,9 +1,19 @@
 {
   "team": [
    {
-     "photo":"",
+     "photo":"https://technext.github.io/knight/assets/img/team/team-1.jpg",
      "name": "Henrique Maia",
-     "ocuppation": "CEO",
+     "occupation": "CEO",
+     "desc":"",
+     "social": {
+       "fb": "",
+       "ig":""
+     }
+   },
+    {
+     "photo":"https://technext.github.io/knight/assets/img/team/team-1.jpg",
+     "name": "Bianca Thisi",
+     "occupation": "Designer",
      "desc":"",
      "social": {
        "fb": "",
