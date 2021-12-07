@@ -222,6 +222,45 @@
     </div>
   </section>
   <!-- End Clients Section -->
+  
+   <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <p>Apresentando, nossa talentosa equipe</p>
+        </div>
+
+        <div class="row">
+
+
+          <% for(let i = 0; i < b_team.length;i++) {%>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <div class="member-img">
+                <img src="<%=b_team[i].photo%>" class="img-fluid" alt="">
+                <div class="social">
+                
+                  <a href="<%=b_team[i].social.fb%>"><i class="bi bi-facebook"></i></a>
+                  <a href="<%=b_team[i].social.ig%>"><i class="bi bi-instagram"></i></a>
+                 
+                </div>
+              </div>
+              <div class="member-info">
+                <h4><%=b_team[i].name%></h4>
+                <span><%=b_team[i].occupation%></span>
+                <p><%=b_team[i].desc%></p>
+              </div>
+            </div>
+          </div>
+          <%}%>
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+  
 
  <!-- ======= Pricing Section ======= -->
 <section id="pricing" class="pricing section-bg">
