@@ -12,6 +12,18 @@
     location.protocol = "https:";
   }
 
+  
+  window.onload = () =>{
+    console.log("Preparado.")
+  }
+  
+  const slowLoad = window.setTimeout( function() {
+        alert( "Conexão ruim com internet, o site pode apresentar falhas" );
+    }, 5000 );
+
+    window.addEventListener( 'load', function() {
+        window.clearTimeout( slowLoad );
+    }, false );
   /**
    * Easy selector helper function
    */

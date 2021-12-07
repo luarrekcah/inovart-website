@@ -445,10 +445,11 @@
       let resultadoNum;
       
       if(productType.selectedIndex == 5) {
-        return alert('calculo cavalete simples')
-        resultadoNum = (alt.value * la)
+        alert('calculo cavalete simples')
+        resultadoNum = ((alt.value * larg.value) * 180) + 2 * ((alt.value * larg.value) * 100)
       } else if (productType.selectedIndex == 6) {
-        return alert("calculo cavalete duplo")
+         alert("calculo cavalete duplo")
+        resultadoNum = 2 * ((alt.value * larg.value) * 180) + 2 * ((alt.value * larg.value) * 100)
       } else {
         resultadoNum = (alt.value * larg.value) * multiplicador;
       }
