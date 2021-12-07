@@ -440,8 +440,20 @@
     if(productType.selectedIndex == 4) multiplicador = 100
     if(productType.selectedIndex == 5) multiplicador = 100
     if(productType.selectedIndex == 6) multiplicador = 100
+      
+      
+      let resultadoNum;
+      
+      if(productType.selectedIndex == 5) {
+        return alert('calculo cavalete simples')
+        resultadoNum = (alt.value * la)
+      } else if (productType.selectedIndex == 6) {
+        return alert("calculo cavalete duplo")
+      } else {
+        resultadoNum = (alt.value * larg.value) * multiplicador;
+      }
     
-    const resultadoNum = (alt.value * larg.value) * multiplicador;
+    
       
       document.getElementById("resultado").innerHTML = 
         `
