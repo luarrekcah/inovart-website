@@ -1,24 +1,34 @@
 {
   "team": [
-   {
-     "photo":"https://technext.github.io/knight/assets/img/team/team-1.jpg",
-     "name": "Henrique Maia",
-     "occupation": "CEO",
-     "desc":"",
-     "social": {
-       "fb": "",
-       "ig":""
-     }
-   },
     {
-     "photo":"https://technext.github.io/knight/assets/img/team/team-1.jpg",
-     "name": "Bianca Thisi",
-     "occupation": "Designer",
-     "desc":"",
-     "social": {
-       "fb": "",
-       "ig":""
-     }
-   }
+      "photo": "https://technext.github.io/knight/assets/img/team/team-1.jpg",
+      "name": "Aulibamar",
+      "occupation": "CEO",
+      "desc": "",
+      "social": {
+        "fb": "",
+        "ig": ""
+      }
+    },
+    {
+      "photo": "https://technext.github.io/knight/assets/img/team/team-1.jpg",
+      "name": "Henrique Maia",
+      "occupation": "Gerente Administrativo",
+      "desc": "",
+      "social": {
+        "fb": "",
+        "ig": ""
+      }
+    },
+    {
+      "photo": "https://technext.github.io/knight/assets/img/team/team-1.jpg",
+      "name": "Bianca Thisi",
+      "occupation": "Designer",
+      "desc": "",
+      "social": {
+        "fb": "",
+        "ig": ""
+      }
+    }
   ]
 }
