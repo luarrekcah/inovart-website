@@ -2027,7 +2027,7 @@
           <option class='perfurado' value="3">Perfurado</option>
           <option class='fachada' value="4">Lona</option>
           <option class='cavalete' value="5">Cavalete simples</option>
-          <option  class'cavalete' value="6">Cavalete duplo</option>
+          <option  class='cavalete' value="6">Cavalete duplo</option>
         </select>
         <label for="floatingSelect">Selecione o tipo de produto:</label>
       </div>
@@ -2448,8 +2448,11 @@
             if(select.children[i].selected) {
               select.children[i].removeAttribute('selected')
             }
+          } else {
+            select.children[i].setAttribute('selected','')
           }
         }
+        
       }
       
       
@@ -2464,10 +2467,10 @@
         case 'banner':
           showOnly('banner')
           break;
-          case 'adesivo':
+          case 'adesivo comum':
           showOnly('adesivo')
           break;
-          case 'perfurado':
+          case 'adesivo perfurado':
           showOnly('perfurado')
           break;
       }
