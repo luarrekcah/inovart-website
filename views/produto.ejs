@@ -2021,13 +2021,13 @@
           aria-label="Tipo de produto"
           id="selectProductType"
         >
-          <option selected>Lona + Ferro (fachada completa)</option>
-          <option value="1">Banner</option>
-          <option value="2">Adesivo</option>
-          <option value="3">Perfurado</option>
-          <option value="4">Lona</option>
-          <option value="5">Cavalete simples</option>
-          <option value="6">Cavalete duplo</option>
+          <option selected class='fachada' >Lona + Ferro (fachada completa)</option>
+          <option class="banner" value="1">Banner</option>
+          <option class="adesivo" value="2">Adesivo</option>
+          <option class='perfurado' value="3">Perfurado</option>
+          <option class='fachada' value="4">Lona</option>
+          <option class='cavalete' value="5">Cavalete simples</option>
+          <option  class'cavalete' value="6">Cavalete duplo</option>
         </select>
         <label for="floatingSelect">Selecione o tipo de produto:</label>
       </div>
@@ -2437,6 +2437,26 @@
   calcButton = document.getElementById("calcOrc"),
   larg = document.getElementById("larg"),
   alt = document.getElementById("alt");
+      
+      
+      
+      const showOnly = (className) => {
+        const select = document.getElementById("floatingSelect");
+        for(let i = 0; i<select.children.length;i++) {
+          if(select.children[i].class != className) {
+            select.children[i].style.display = 'none';
+          }
+        }
+      }
+      
+      
+ const produto = `<%= name%>`.toLowerCase();
+      switch (produto) {
+        case 'fachada':
+          ...
+          break;
+      }
+      
 
 const verifyInputs = () => {
   if (
@@ -2536,25 +2556,10 @@ calcButton.addEventListener("click", () => {
            `
          }
       });
+      
+      
 
-      /*
-        location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguintes produto: <%= name%>
-        
-        ${'Cartão Visita' == 'Cartão Visita' ? '' : document.getElementById("floatingSelect").value }
-        
-        ${document.getElementById("floatingInput").value == '' ? '' : document.getElementById("floatingInput").value}
-        
-        ${document.getElementById("floatingInput").value == '' ? '' : document.getElementById("alt").value + " X " + document.getElementById("larg").value }
-        
-        ${document.getElementById("floatingInput").style.display == 'none' ? document.getElementById("materialCard").value : ''}
-         
-        ${document.getElementById("floatingInput").style.display == 'none' ? document.getElementById("coberturaCard").value : ''}
-        
-        ${document.getElementById("floatingInput").style.display == 'none' ? document.getElementById("tamanhoCard").value : ''}
-        
-        ${document.getElementById("floatingInput").style.display == 'none' ? checked.value + " cartões" : ''}
-        `*/
-
+ 
     </script>
   </body>
 </html>
