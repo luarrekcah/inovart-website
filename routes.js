@@ -87,7 +87,7 @@ module.exports = app => {
         floatingLabel:
           "Insira abaixo as medidas, como largura e altura, e se deseja com estrutura ou sem:",
         itens: {
-          basicInfos: "block",
+          basicInfos: "none",
           tableCards: "none",
           tableOrc: "block"
         }
@@ -107,7 +107,7 @@ module.exports = app => {
           "Orçamento com base nas medidas necessárias e materiais a serem utilizados",
         floatingLabel: "Insira abaixo as medidas, como largura e altura:",
         itens: {
-          basicInfos: "block",
+          basicInfos: "none",
           tableCards: "none",
           tableOrc: "banner"
         }
@@ -133,7 +133,7 @@ OBS: duas estruturas metálicas, lona frente e verso
 `,
         floatingLabel: "Insira abaixo as medidas, como largura e altura:",
         itens: {
-          basicInfos: "block",
+          basicInfos: "none",
           tableCards: "none",
           tableOrc: "block"
         }
@@ -152,7 +152,7 @@ OBS: duas estruturas metálicas, lona frente e verso
         details: "Orçamento com base nas medidas necessárias",
         floatingLabel: "Insira abaixo as medidas, como largura e altura:",
         itens: {
-          basicInfos: "block",
+          basicInfos: "none",
           tableCards: "none",
           tableOrc: "block"
         }
@@ -171,7 +171,7 @@ OBS: duas estruturas metálicas, lona frente e verso
         details: "Orçamento com base nas medidas e quantidades.",
         floatingLabel: "Insira abaixo as medidas e quantias de adesivos:",
         itens: {
-          basicInfos: "block",
+          basicInfos: "none",
           tableCards: "none",
           tableOrc: "block"
         }
@@ -191,7 +191,7 @@ OBS: duas estruturas metálicas, lona frente e verso
           "Orçamento com base nas medidas ou, valor único para automoveis.",
         floatingLabel: "Insira abaixo as medidas:",
         itens: {
-          basicInfos: "block",
+          basicInfos: "none",
           tableCards: "none",
           tableOrc: "block"
         }
