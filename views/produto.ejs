@@ -2021,7 +2021,7 @@
           aria-label="Tipo de produto"
           id="selectProductType"
         >
-          <option selected class='fachada' >Lona + Ferro (fachada completa)</option>
+          <option selected class='fachada' >Lona e Ferro (fachada completa)</option>
           <option class="banner" value="1">Banner</option>
           <option class="adesivo" value="2">Adesivo</option>
           <option class='perfurado' value="3">Perfurado</option>
@@ -2543,6 +2543,8 @@ calcButton.addEventListener("click", () => {
           return 'cv' 
         } else if(produto.toLowerCase() == 'logotipo' || produto.toLowerCase() == 'arte digital') {
           return 'simple' 
+        }else if(produto.toLowerCase() == 'cavalete') {
+          return 'cavalete' 
         }else { 
           return false;
         }
@@ -2551,8 +2553,9 @@ calcButton.addEventListener("click", () => {
      
       document.getElementById("fzrPedido").addEventListener('click', () => {
          const checked = getCheckedValue();
+         const produto = getProductType();
         
-         if(getProductType() == 'cv') {
+         if(produto == 'cv') {
            if(checked == 'undefined') return alert("Escolha alguma quantia de cartões visita")
            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
            Material: ${ document.getElementById("materialCard").value };
@@ -2560,16 +2563,22 @@ calcButton.addEventListener("click", () => {
            Tamanho: ${document.getElementById("tamanhoCard").value};
            Desejo ${checked.value} UNIDs.
            `
-         } else if(getProductType() == 'simple') {
+         } else if(produto == 'simple') {
            
            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
            Dados: ${document.getElementById("floatingInput").value}.
+           `
+         } else if(produto == 'cavalete') {
+            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto na categoria *<%= name%>*.
+           Largura: ${ document.getElementById("larg").value };
+           Altura: ${document.getElementById("alt").value};
+           Especificações: ${document.getElementById("floatingSelect")[document.getElementById("floatingSelect").value].innerText};
            `
          } else {
            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
            Largura: ${ document.getElementById("larg").value };
            Altura: ${document.getElementById("alt").value};
-           Especificações: ${document.getElementById("floatingSelect").value};
+           Especificações: ${document.getElementById("floatingSelect")[document.getElementById("floatingSelect").value].innerText};
            Dados: ${document.getElementById("floatingInput").value}.
            `
          }
