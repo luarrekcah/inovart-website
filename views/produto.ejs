@@ -2557,29 +2557,18 @@ calcButton.addEventListener("click", () => {
         
          if(produto == 'cv') {
            if(checked == 'undefined') return alert("Escolha alguma quantia de cartões visita")
-           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
-           Material: ${ document.getElementById("materialCard").value };
-           Cobertura: ${document.getElementById("coberturaCard").value};
-           Tamanho: ${document.getElementById("tamanhoCard").value};
+           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.%0A
+           Material: ${ document.getElementById("materialCard").value };%0A
+           Cobertura: ${document.getElementById("coberturaCard").value};%0A
+           Tamanho: ${document.getElementById("tamanhoCard").value};%0A
            Desejo ${checked.value} UNIDs.
            `
          } else if(produto == 'simple') {
-           
-           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
-           Dados: ${document.getElementById("floatingInput").value}.
-           `
+           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.%0ADados: ${document.getElementById("floatingInput").value}.`
          } else if(produto == 'cavalete') {
-            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto na categoria *<%= name%>*.
-           Largura: ${ document.getElementById("larg").value };
-           Altura: ${document.getElementById("alt").value};
-           Especificações: ${document.getElementById("floatingSelect")[document.getElementById("floatingSelect").value].innerText};
-           `
+            location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto na categoria *<%=name%>*.%0ALargura: ${ document.getElementById("larg").value };%0AAltura: ${document.getElementById("alt").value};%0AEspecificações: ${document.getElementById("floatingSelect")[document.getElementById("floatingSelect").value].innerText};%0AValor: R$${resultadoNum}`
          } else {
-           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.
-           Largura: ${ document.getElementById("larg").value };
-           Altura: ${document.getElementById("alt").value};
-           Especificações: ${document.getElementById("floatingSelect")[document.getElementById("floatingSelect").value].innerText};
-           Dados: ${document.getElementById("floatingInput").value}.
+           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.%0ALargura: ${ document.getElementById("larg").value };%0AAltura: ${document.getElementById("alt").value};%0AEspecificações: ${document.getElementById("floatingSelect")[document.getElementById("floatingSelect").value].innerText};%0ADados: ${document.getElementById("floatingInput").value}.
            `
          }
       });
