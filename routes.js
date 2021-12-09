@@ -116,7 +116,7 @@ module.exports = app => {
       return {
         name: "Cavalete",
         photos: [
-          "https://img.freepik.com/psd-gratuitas/quadro-metalico-e-cavalete-de-madeira-com-maquete-de-lona_23-2149045658.jpg?size=626&ext=jpg"
+          "https://cdn.glitch.me/a81e3a0e-1158-4a11-bdef-9d223f8f0432%2Fquadro-metalico-e-cavalete-de-madeira-com-maquete-de-lona_23-2149045658.jpg?v=1639062891691"
         ],
         category: "Cavalete",
         titleValue: "Valor do m² ferro e lona",
