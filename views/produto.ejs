@@ -1988,7 +1988,6 @@
                       aria-label="Tipo de produto"
                     >
                       <option selected="UV">UV</option>
-                     
                     </select>
                     <label for="floatingSelect">Cobertura:</label>
                   </div>
@@ -2003,7 +2002,6 @@
                       aria-label="Tipo de produto"
                     >
                       <option selected="8cm X 5cm">8cm X 5cm</option>
-                      
                     </select>
                     <label for="floatingSelect">Tamanho:</label>
                   </div>
@@ -2516,8 +2514,8 @@
           return true;
         }
       };
-      
-       const getCheckedValue = () => {
+
+      const getCheckedValue = () => {
         const elements = document.getElementsByClassName("form-check-input");
         let checked;
         for (let i = 0; i < elements.length; i++) {
@@ -2544,53 +2542,7 @@
         }
       };
 
-      
-     
-      calcButton.addEventListener("click", () => {
-        if (verifyInputs()) {
-          let multiplicador = 0;
-          if (productType.selectedIndex == 0) multiplicador = 180;
-          if (productType.selectedIndex == 1) multiplicador = 100;
-          if (productType.selectedIndex == 2) multiplicador = 100;
-          if (productType.selectedIndex == 3) multiplicador = 100;
-          if (productType.selectedIndex == 4) multiplicador = 100;
-          if (productType.selectedIndex == 5) multiplicador = 100;
-          if (productType.selectedIndex == 6) multiplicador = 100;
-
-          let resultadoNum;
-
-          if (productType.selectedIndex == 5) {
-            resultadoNum =
-              alt.value * larg.value * 90 + 2 * (alt.value * larg.value * 90);
-          } else if (productType.selectedIndex == 6) {
-            resultadoNum =
-              2 * (alt.value * larg.value * 90) +
-              2 * (alt.value * larg.value * 90);
-          } else {
-            console.log(multiplicador);
-            resultadoNum = alt.value * larg.value * multiplicador;
-          }
-
-          document.getElementById("resultado").innerHTML = `
-        <h2 style="color: green;">Valor aproximado - R$${resultadoNum}</h2>
-        `;
-          document.getElementById("resultado").style.display = "block";
-        } else {
-          alert("Preencha os campos de altura e largura.");
-        }
-      });
-      
-
-     
-
-      document.getElementById("fzrPedido").addEventListener("click", () => {
-        const checked = getCheckedValue();
-        const produto = getProductType();
-        
-        
-        
-
-         if(getProductType() != 'cv') {
+      const resultadoReais = () => {
         let resultadoNum;
 
         if (productType.selectedIndex == 5) {
@@ -2603,9 +2555,35 @@
         } else {
           resultadoNum = alt.value * larg.value * multiplicador;
         }
-         } else {
-           if(checked == undefined) return alert('Selecione uma quantidade de cartões.')
-         }
+
+        return resultadoNum;
+      };
+
+      calcButton.addEventListener("click", () => {
+        if (verifyInputs()) {
+          let multiplicador = 0;
+          if (productType.selectedIndex == 0) multiplicador = 180;
+          if (productType.selectedIndex == 1) multiplicador = 100;
+          if (productType.selectedIndex == 2) multiplicador = 100;
+          if (productType.selectedIndex == 3) multiplicador = 100;
+          if (productType.selectedIndex == 4) multiplicador = 100;
+          if (productType.selectedIndex == 5) multiplicador = 100;
+          if (productType.selectedIndex == 6) multiplicador = 100;
+
+          document.getElementById("resultado").innerHTML = `
+        <h2 style="color: green;">Valor aproximado - R$${resultadoReais()}</h2>
+        `;
+          document.getElementById("resultado").style.display = "block";
+        } else {
+          alert("Preencha os campos de altura e largura.");
+        }
+      });
+
+      document.getElementById("fzrPedido").addEventListener("click", () => {
+        const checked = getCheckedValue();
+        const produto = getProductType();
+
+        if (getProductType() == "cv" && checked == undefined) return alert("Selecione uma quantidade de cartões.");
 
         if (produto == "cv") {
           if (checked == "undefined")
@@ -2620,7 +2598,7 @@
         } else if (produto == "simple") {
           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.%0ADados: ${
             document.getElementById("floatingInput").value
-          }.%0AValor: R$${resultadoNum}`;
+          }.%0AValor: R$${resultadoReais()}`;
         } else if (produto == "cavalete") {
           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto na categoria *<%=name%>*.%0ALargura: ${
             document.getElementById("larg").value
@@ -2630,7 +2608,7 @@
             document.getElementById("floatingSelect")[
               document.getElementById("floatingSelect").value
             ].innerText
-          };%0AValor: R$${resultadoNum}`;
+          };%0AValor: R$${resultadoReais()}`;
         } else {
           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.%0ALargura: ${
             document.getElementById("larg").value
@@ -2642,7 +2620,7 @@
             ].innerText
           };%0ADados: ${
             document.getElementById("floatingInput").value
-          }.%0AValor: R$${resultadoNum}`;
+          }.%0AValor: R$${resultadoReais()}`;
         }
       });
     </script>
