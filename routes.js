@@ -5,8 +5,8 @@ const ejs = require("ejs");
 const { portProducts } = require("./data/products.json"),
   { services } = require("./data/services.json"),
   { faq } = require("./data/faq.json"),
-      { logos } = require("./data/clientLogos.json"),
-       { team } = require("./data/team.json");
+  { logos } = require("./data/clientLogos.json"),
+  { team } = require("./data/team.json");
 
 const basicData = {
   b_phoneNumber: "+55 68 9226-0660",
@@ -256,7 +256,7 @@ OBS: duas estruturas metálicas, lona frente e verso
           tableOrc: "none"
         }
       };
-    } 
+    }
   };
 
   app.get("/produto/tipo/:type", (req, res) => {
