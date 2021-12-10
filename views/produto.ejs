@@ -53,7 +53,7 @@
     <!-- Template Main CSS File -->
 
     <style>
-      /**
+      /*
 * Template Name: Knight - v4.3.0
 * Template URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
 * Author: BootstrapMade.com
@@ -2588,7 +2588,7 @@
         if (produto == "cv") {
           if (checked == "undefined")
             return alert("Escolha alguma quantia de cartões visita");
-          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.%0AMaterial: ${
+          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, selecionei o seguinte produto: *<%= name%>*.%0AMaterial: ${
             document.getElementById("materialCard").value
           };%0ACobertura: ${
             document.getElementById("coberturaCard").value
@@ -2596,21 +2596,21 @@
             document.getElementById("tamanhoCard").value
           };%0ADesejo ${checked.value} UNIDs.`;
         } else if (produto == "simple") {
-          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.%0ADados: ${
+          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, selecionei o seguinte produto: *<%= name%>*.%0ADados: ${
             document.getElementById("floatingInput").value
           }.%0AValor: R$${resultadoReais()}`;
         } else if (produto == "cavalete") {
-          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto na categoria *<%=name%>*.%0ALargura: ${
+          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, selecionei o seguinte produto na categoria *<%=name%>*.%0ALargura: ${
             document.getElementById("larg").value
-          };%0AAltura: ${
+          }m%0AAltura: ${
             document.getElementById("alt").value
-          };%0AEspecificações: ${
+          }m%0AEspecificações: ${
             document.getElementById("floatingSelect")[
               document.getElementById("floatingSelect").value
             ].innerText
           };%0AValor: R$${resultadoReais()}`;
         } else {
-          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, eu selecionei o seguinte produto: *<%= name%>*.%0ALargura: ${
+          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, selecionei o seguinte produto: *<%= name%>*.%0ALargura: ${
             document.getElementById("larg").value
           };%0AAltura: ${
             document.getElementById("alt").value

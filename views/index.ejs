@@ -170,7 +170,7 @@
   <section id="testimonials" class="testimonials">
     <div class="container" data-aos="zoom-in">
       <div class="quote-icon">
-        <i class="bi bi-person">Team</i> 
+        <i class="bi bi-person">Nossa equipe</i> 
       </div>
 
       <div
@@ -227,7 +227,7 @@
 <section id="pricing" class="pricing section-bg">
   <div class="container">
     <div class="section-title" data-aos="fade-up">
-      <h2>Valores</h2>
+      <h2>Orçamento</h2>
       <p>
         Logo abaixo você pode fazer uma simulação do tipo de produto que deseja
         e realizar o pedido.
@@ -237,7 +237,7 @@
     <div class="row" data-aos="fade-up">
       <!--Simulador e botão de pedido-->
       <h2>
-        Orçamento aproximado por medida
+        Insira o material e a medida logo abaixo
       </h2>
       <p>
         Obs: o resultado abaixo é o valor mais próximo ao valor final, entre em
@@ -323,11 +323,7 @@
   <section id="contact" class="contact section-bg">
     <div class="container">
       <div class="section-title">
-        <h2>Contato</h2>
-        <p>
-          Tem alguma dúvida? Um pedido? Ou até mesmo uma sugestão? Entre em
-          contato conosco.
-        </p>
+        
       </div>
 
       <div class="row">
@@ -366,8 +362,14 @@
         </div>
 
         <div class="col-lg-8 mt-5 mt-lg-0">
+          
           <form role="form" class="php-email-form" data-aos="fade-left">
+            
             <div class="row">
+              <h2>Contato</h2>
+        <p>
+          Reclamação ou sugestão para melhor lhe atender
+        </p>
               <div class="form-group mt-3">
                 <input
                   type="text"
@@ -411,9 +413,7 @@
 
     location.href = `https://api.whatsapp.com/send?phone=<%= b_linkWpp %>&text=Olá, me chamo ${
       document.getElementById("name").value
-    }.
-  
-  ${document.getElementById("contactMessage").value}`;
+    }.%0A${document.getElementById("contactMessage").value}`;
   });
   
   const productType = document.getElementById("floatingSelect"), 
