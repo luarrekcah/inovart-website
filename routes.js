@@ -43,7 +43,7 @@ module.exports = app => {
       if (item.id == req.params.id) return item;
     });
 
-    res.render("produto", productDetails[0]);
+    res.render("servicoInfo", productDetails[0]);
   });
 
   const productType = query => {
@@ -260,7 +260,7 @@ OBS: duas estruturas metálicas, lona frente e verso
   };
 
   app.get("/produto/tipo/:type", (req, res) => {
-    res.render("produtos", productType(req.params.type));
+    res.render("produto", productType(req.params.type));
   });
 
   app.get("*", (req, res) => {
