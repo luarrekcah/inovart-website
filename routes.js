@@ -260,7 +260,7 @@ OBS: duas estruturas metálicas, lona frente e verso
   };
 
   app.get("/produto/tipo/:type", (req, res) => {
-    res.render("produto", productType(req.params.type));
+    res.render("produtos", productType(req.params.type));
   });
 
   app.get("*", (req, res) => {
