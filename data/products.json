@@ -24,12 +24,102 @@
     },
     {
       "id": "03",
-      "name": "Arte do Sorriso",
+      "name": "Copiadora Acesso Informática",
       "category": "Fachada",
       "client": "Não registrado",
       "data": "Não registrado",
       "photos": [
-        "https://cdn.discordapp.com/attachments/916764863458594866/919020985280237628/033e5fee-35b2-49ce-90b4-076e483e27ab.png"
+        "https://cdn.discordapp.com/attachments/916764863458594866/919021320539365427/a48b0c70-4f3b-442d-ba88-b063a0afc823.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "04",
+      "name": "Copiadora Acesso Informática",
+      "category": "Fachada",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/919021320539365427/a48b0c70-4f3b-442d-ba88-b063a0afc823.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "05",
+      "name": "Copiadora Acesso Informática",
+      "category": "Banner",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/919021649188245564/45082771-73f0-4a1f-91d4-5e44832d4356.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "06",
+      "name": "Copiadora Acesso Informática",
+      "category": "Other",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/919021846219874364/bfff0fe3-85f2-4868-b651-6ee2b2a9b831.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "07",
+      "name": "Contêiner da Maria",
+      "category": "Fachada",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/919022080085884949/d20c959f-bf44-4177-b9bb-d1171b955718.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "08",
+      "name": "Brasil Óticas",
+      "category": "Fachada",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/919022286613385306/74584af0-6d05-4722-b610-41a454dba691.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "09",
+      "name": "Oficina Mecânica 2 Irmãos",
+      "category": "Fachada",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/919022559507402802/7bb1f533-5713-4413-8e02-cf540e1a984a.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "10",
+      "name": "Palácio das Baterias",
+      "category": "Fachada",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/919022974705741844/cf35240c-e2e1-45c6-90f3-a3c49d506d95.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "11",
+      "name": "Brechó Fina Estampa",
+      "category": "B",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/919023111331020800/80ce323c-52ce-4773-b0ab-5a68cb7628da.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "12",
+      "name": "Brechó Fina Estampa",
+      "category": "Fachada",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/919023111331020800/80ce323c-52ce-4773-b0ab-5a68cb7628da.png"
       ],
       "details": "Arte e instalação InovArt, Rio Branco - AC"
     }
