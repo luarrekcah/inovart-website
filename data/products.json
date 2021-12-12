@@ -33,16 +33,6 @@
       ],
       "details": "Arte e instalação InovArt, Rio Branco - AC"
     },{
-      "id": "04",
-      "name": "Copiadora Acesso Informática",
-      "category": "Fachada",
-      "client": "Não registrado",
-      "data": "Não registrado",
-      "photos": [
-        "https://cdn.discordapp.com/attachments/916764863458594866/919021320539365427/a48b0c70-4f3b-442d-ba88-b063a0afc823.png"
-      ],
-      "details": "Arte e instalação InovArt, Rio Branco - AC"
-    },{
       "id": "05",
       "name": "Copiadora Acesso Informática",
       "category": "Banner",
@@ -125,7 +115,7 @@
     },{
       "id": "13",
       "name": "Brasil Óticas",
-      "category": "Fachada",
+      "category": "Adesivo",
       "client": "Não registrado",
       "data": "Não registrado",
       "photos": [
@@ -135,7 +125,7 @@
     },{
       "id": "14",
       "name": "Railene Simões",
-      "category": "Fachada",
+      "category": "Adesivo",
       "client": "Não registrado",
       "data": "Não registrado",
       "photos": [
