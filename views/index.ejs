@@ -1,16 +1,49 @@
 <%- include('partials/header.ejs')-%>
 
+
+
 <main id="main">
+  
+  <style>
+.video-container {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  color: #dc0000;
+  padding: 10px;
+}  
+</style>
   
   <!-- ======= About Us Section ======= -->
   <section id="about" class="about">
     <div class="container">
       <div class="section-title" data-aos="fade-up">
         <!--<h2>Sobre nós</h2>-->
-        <b style="font-size: 30px">
-          Com certeza, é sua maior dúvida no momento saber se somos a melhor
-          empresa para seus projetos. Dá uma olhada aqui em baixo!
-        </b>
+        <div class="video-container">
+  <video autoplay muted loop>
+    <source src="" type="video/mp4" />
+  </video>
+  <div class="caption">
+    <h2>p</h2>
+  </div>
+</div>
       </div>
 
       <div class="row">
