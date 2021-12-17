@@ -3,16 +3,29 @@
 
 
 <main id="main" >
+  
+  <style>
+  
+  @media screen and (max-width: 768px) {
+  #video {
+    margin-top: +50vh;
+  }
+}
+
+#video {
+  width: 100%;
+  height: 100%;
+  margin-top: -50vh;
+}
+  </style>
   <div class="video-container" style="overflow: hidden;" id="about">
     
   
     
  
   <video autoplay muted loop style="
-    width: 100%;
-    height: 100%;
-                                    margin-top: -50vh;
-" >
+                                
+" id="video">
     <source src="https://inovaimpressaodigital.com.br/wp-content/uploads/2021/09/Sliderrevolution.mp4" type="video/mp4" />
   </video>
      </div>
