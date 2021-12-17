@@ -505,10 +505,17 @@ section {
   padding-bottom: 10px;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
 }
 
-.about .content ul i {
+.about .content ul{
   font-size: 24px;
+  padding: 2px 6px 0 0;
+  color: #7cc576;
+}
+
+.about .content i {
+  font-size: 60px;
   padding: 2px 6px 0 0;
   color: #7cc576;
 }
