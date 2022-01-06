@@ -422,6 +422,26 @@
         "https://cdn.discordapp.com/attachments/916764863458594866/919054913059848242/unknown.png"
       ],
       "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "44",
+      "name": "Ponto Cell",
+      "category": "Fachada",
+      "client": "Não registrado",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/928494000493707314/8099e1d5-f133-49fd-8a24-63be15215204.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
+    },{
+      "id": "45",
+      "name": "D Walt Engenharia",
+      "category": "Fachada",
+      "client": "Walter Silva - CEO",
+      "data": "Não registrado",
+      "photos": [
+        "https://cdn.discordapp.com/attachments/916764863458594866/928494076448342036/5bc78e01-2815-40cf-86ff-1dde5c726e8a.png"
+      ],
+      "details": "Arte e instalação InovArt, Rio Branco - AC"
     }
   ]
 }
