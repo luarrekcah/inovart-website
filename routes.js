@@ -37,6 +37,11 @@ module.exports = app => {
   app.get("/", (req, res) => {
     res.render("index", basicData);
   });
+  
+   app.get("/portfolio", (req, res) => {
+    res.render("portfolio", basicData);
+  });
+
 
   app.get("/produto/:id", (req, res) => {
     const productDetails = portProducts.filter(item => {
