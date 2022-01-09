@@ -2630,12 +2630,18 @@
         if (produto == "cv") {
           if (checked == "undefined")
             return alert("Escolha alguma quantia de cartões visita");
-          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, selecionei o seguinte produto: *<%= name%>*.%0AMaterial: ${
+          location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, selecionei o seguinte produto: *<%= name%>*.%0ACategoria: ${
+            document.getElementById("catCard").value
+          };%0AMaterial: ${
             document.getElementById("materialCard").value
+          };%0ACor: ${
+            document.getElementById("corCard").value
           };%0ACobertura: ${
             document.getElementById("coberturaCard").value
           };%0ATamanho: ${
             document.getElementById("tamanhoCard").value
+          };%0AAcabamento Incluso: ${
+            document.getElementById("acabInCard").value
           };%0ADesejo ${checked.value} UNIDs.`;
         } else if (produto == "simple") {
           location.href = `https://api.whatsapp.com/send?phone=556892260660&text=Olá, selecionei o seguinte produto: *<%= name%>*.%0ADados: ${
