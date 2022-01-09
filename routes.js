@@ -17,10 +17,10 @@ const basicData = {
   b_services: services,
   b_faq: faq,
   b_clientLogos: logos,
-  b_team: team
+  b_team: team,
 };
 
-module.exports = app => {
+module.exports = (app) => {
   app.use(bodyParser.text());
 
   app.set("view engine", "ejs");
@@ -37,32 +37,31 @@ module.exports = app => {
   app.get("/", (req, res) => {
     res.render("index", basicData);
   });
-  
-   app.get("/portfolio", (req, res) => {
+
+  app.get("/portfolio", (req, res) => {
     res.render("portfolio", basicData);
   });
 
-
   app.get("/produto/:id", (req, res) => {
-    const productDetails = portProducts.filter(item => {
+    const productDetails = portProducts.filter((item) => {
       if (item.id == req.params.id) return item;
     });
 
     res.render("servicoInfo", productDetails[0]);
   });
 
-  const productType = query => {
+  const productType = (query) => {
     const defaultValues = {
       lona: "90",
       lonaEstrutura: "180",
       flyer: "40",
-      logo: "100"
+      logo: "100",
     };
     if (query == "cartao-visita") {
       return {
         name: "Cartão Visita",
         photos: [
-          "https://carvalhoprintoffice.com.br/wp-content/uploads/2017/09/100-modelos-de-cart%C3%A3o-de-visita-para-se-inspirar-muito-1-900x600.png"
+          "https://carvalhoprintoffice.com.br/wp-content/uploads/2017/09/100-modelos-de-cart%C3%A3o-de-visita-para-se-inspirar-muito-1-900x600.png",
         ],
         category: "Other",
         titleValue: "Valor milheiro",
@@ -75,14 +74,14 @@ module.exports = app => {
           basicInfos: "none",
           tableCards: "block",
           tableOrc: "none",
-          productInfos: "none"
-        }
+          productInfos: "none",
+        },
       };
     } else if (query == "fachada") {
       return {
         name: "Fachada",
         photos: [
-          "https://img.freepik.com/psd-gratuitas/maquete-de-outdoor-vertical-de-grande-escala-minima_53876-65947.jpg?size=626&ext=jpg"
+          "https://img.freepik.com/psd-gratuitas/maquete-de-outdoor-vertical-de-grande-escala-minima_53876-65947.jpg?size=626&ext=jpg",
         ],
         category: "Fachada",
         titleValue: "Valor do m² com estrutura",
@@ -95,14 +94,15 @@ module.exports = app => {
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block",productInfos: "block"
-        }
+          tableOrc: "block",
+          productInfos: "block",
+        },
       };
     } else if (query == "banner") {
       return {
         name: "Banner",
         photos: [
-          "https://mockuptree.com/wp-content/uploads/edd/2020/09/free-lamp-post-banner-mockup-960x640.jpg"
+          "https://mockuptree.com/wp-content/uploads/edd/2020/09/free-lamp-post-banner-mockup-960x640.jpg",
         ],
         category: "Banner",
         titleValue: "Valor do m²",
@@ -115,14 +115,15 @@ module.exports = app => {
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "banner",productInfos: "block"
-        }
+          tableOrc: "banner",
+          productInfos: "block",
+        },
       };
     } else if (query == "cavalete") {
       return {
         name: "Cavalete",
         photos: [
-          "https://cdn.glitch.me/a81e3a0e-1158-4a11-bdef-9d223f8f0432%2Fquadro-metalico-e-cavalete-de-madeira-com-maquete-de-lona_23-2149045658.jpg?v=1639062891691"
+          "https://cdn.glitch.me/a81e3a0e-1158-4a11-bdef-9d223f8f0432%2Fquadro-metalico-e-cavalete-de-madeira-com-maquete-de-lona_23-2149045658.jpg?v=1639062891691",
         ],
         category: "Cavalete",
         titleValue: "Valor do m² ferro e lona",
@@ -141,14 +142,15 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block",productInfos: "block"
-        }
+          tableOrc: "block",
+          productInfos: "block",
+        },
       };
     } else if (query == "outdoor") {
       return {
         name: "Outdoor",
         photos: [
-          "https://www.mockupworld.co/wp-content/uploads/2015/07/Outdoor-Advertinsing-MockUps_4.jpg"
+          "https://www.mockupworld.co/wp-content/uploads/2015/07/Outdoor-Advertinsing-MockUps_4.jpg",
         ],
         category: "Outdoor",
         titleValue: "Valor do m² ferro e lona",
@@ -160,14 +162,15 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block",productInfos: "block"
-        }
+          tableOrc: "block",
+          productInfos: "block",
+        },
       };
     } else if (query == "adesivo-comum") {
       return {
         name: "Adesivo comum",
         photos: [
-          "https://img.freepik.com/psd-gratuitas/maquete-de-adesivo-redondo_68185-317.jpg?size=338&ext=jpg"
+          "https://img.freepik.com/psd-gratuitas/maquete-de-adesivo-redondo_68185-317.jpg?size=338&ext=jpg",
         ],
         category: "Other",
         titleValue: "Valor do m² adesivo",
@@ -179,14 +182,15 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block",productInfos: "block"
-        }
+          tableOrc: "block",
+          productInfos: "block",
+        },
       };
     } else if (query == "adesivo-perfurado") {
       return {
         name: "Adesivo perfurado",
         photos: [
-          "https://images.tcdn.com.br/img/img_prod/372162/110_1_20140325180455.jpg"
+          "https://images.tcdn.com.br/img/img_prod/372162/110_1_20140325180455.jpg",
         ],
         category: "Other",
         titleValue: "Valor do m²",
@@ -199,14 +203,15 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block",productInfos: "block"
-        }
+          tableOrc: "block",
+          productInfos: "block",
+        },
       };
     } else if (query == "logotipo") {
       return {
         name: "Logotipo",
         photos: [
-          "https://img.freepik.com/free-psd/logo-mockup-grey-wall_35913-2122.jpg?size=626&ext=jpg"
+          "https://img.freepik.com/free-psd/logo-mockup-grey-wall_35913-2122.jpg?size=626&ext=jpg",
         ],
         category: "Other",
         titleValue: "Tipo",
@@ -219,14 +224,15 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "block",
           tableCards: "none",
-          tableOrc: "none",productInfos: "block"
-        }
+          tableOrc: "none",
+          productInfos: "block",
+        },
       };
     } else if (query == "arte-digital") {
       return {
         name: "Flyer",
         photos: [
-          "https://img.elo7.com.br/product/original/3C93B54/mockup-celular-para-arte-digital-arte-para-sublimacao.jpg"
+          "https://img.elo7.com.br/product/original/3C93B54/mockup-celular-para-arte-digital-arte-para-sublimacao.jpg",
         ],
         category: "Other",
         titleValue: "Valor arte digital",
@@ -239,14 +245,15 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "block",
           tableCards: "none",
-          tableOrc: "none",productInfos: "block"
-        }
+          tableOrc: "none",
+          productInfos: "block",
+        },
       };
     } else if (query == "impressora-plotter") {
       return {
         name: "Impressora Plotter",
         photos: [
-          "https://m.media-amazon.com/images/I/818P+qYvSHS._AC_SX300_SY300_.jpg"
+          "https://m.media-amazon.com/images/I/818P+qYvSHS._AC_SX300_SY300_.jpg",
         ],
         category: "Other",
         titleValue: "Valor impressora plotter",
@@ -259,14 +266,15 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "none",productInfos: "block"
-        }
+          tableOrc: "none",
+          productInfos: "block",
+        },
       };
     } else if (query == "cracha") {
       return {
         name: "Crachá",
         photos: [
-          "https://m.media-amazon.com/images/I/818P+qYvSHS._AC_SX300_SY300_.jpg"
+          "https://m.media-amazon.com/images/I/818P+qYvSHS._AC_SX300_SY300_.jpg",
         ],
         category: "Other",
         titleValue: "Valor Crachá",
@@ -279,9 +287,11 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "none",productInfos: "block"
-        }
+          tableOrc: "none",
+          productInfos: "block",
+        },
       };
+    }
   };
 
   app.get("/produto/tipo/:type", (req, res) => {
