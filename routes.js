@@ -56,6 +56,9 @@ module.exports = (app) => {
       lonaEstrutura: "180",
       flyer: "40",
       logo: "100",
+      cracha: "XXX",
+      sacola: "XXX",
+      bloco: "XXX"
     };
     if (query == "cartao-visita") {
       return {
@@ -274,13 +277,55 @@ OBS: duas estruturas metálicas, lona frente e verso
       return {
         name: "Crachá",
         photos: [
-          "https://m.media-amazon.com/images/I/818P+qYvSHS._AC_SX300_SY300_.jpg",
+          "https://www.martdigital.com.br/wp-content/uploads/2020/01/Crach%C3%A1-1.jpg",
         ],
         category: "Other",
-        titleValue: "Valor Crachá",
-        value: "R$" + defaultValues.flyer,
+        titleValue: "Valor UNID Crachá",
+        value: "R$" + defaultValues.cracha,
         source: "Tipo",
-        sourceDesc: "Artes digitais gerais",
+        sourceDesc: "Personalizado",
+        details: "Entre em contato para realizar um orçamento",
+        floatingLabel:
+          "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
+        itens: {
+          basicInfos: "none",
+          tableCards: "none",
+          tableOrc: "none",
+          productInfos: "block",
+        },
+      };
+    }else if (query == "sacola") {
+      return {
+        name: "Sacola",
+        photos: [
+          "https://img.elo7.com.br/product/zoom/3121601/sacola-personalizada-em-papel-tamanho-m-kit-com-50-sacola-bijuteria.jpg",
+        ],
+        category: "Other",
+        titleValue: "Valor UNID sacola",
+        value: "R$" + defaultValues.sacola,
+        source: "Tipo",
+        sourceDesc: "Personalizado",
+        details: "Entre em contato para realizar um orçamento",
+        floatingLabel:
+          "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
+        itens: {
+          basicInfos: "none",
+          tableCards: "none",
+          tableOrc: "none",
+          productInfos: "block",
+        },
+      };
+    } else if (query == "bloco") {
+      return {
+        name: "Bloco de Anotação",
+        photos: [
+          "https://cdn.atualcard.com.br/arquivos/menu/normais/bloco-anotacoes-sulfite-90g-487x296-.png",
+        ],
+        category: "Other",
+        titleValue: "Valor UNID bloco",
+        value: "R$" + defaultValues.bloco,
+        source: "Tipo",
+        sourceDesc: "Personalizado",
         details: "Entre em contato para realizar um orçamento",
         floatingLabel:
           "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
