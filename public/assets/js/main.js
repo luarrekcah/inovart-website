@@ -132,7 +132,9 @@
   let buttonOrc = select(".buttonOrc");
   if (buttonOrc) {
     const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 7220) {
+        buttonOrc.classList.remove("active");
+      } else if(window.scrollY > 100) {
         buttonOrc.classList.add("active");
       } else {
         buttonOrc.classList.remove("active");
