@@ -12,7 +12,7 @@ const basicData = {
   b_phoneNumber: "+55 68 9226-0660",
   b_linkWpp: "556892260660",
   b_email: "henriquemaia235@gmail.com",
-  b_cnpj: "NULL",
+  b_cnpj: "44.754.524/0001-43",
   b_produtos: portProducts,
   b_services: services,
   b_faq: faq,
