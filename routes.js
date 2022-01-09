@@ -74,7 +74,8 @@ module.exports = app => {
         itens: {
           basicInfos: "none",
           tableCards: "block",
-          tableOrc: "none"
+          tableOrc: "none",
+          productInfos: "none"
         }
       };
     } else if (query == "fachada") {
@@ -94,7 +95,7 @@ module.exports = app => {
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block"
+          tableOrc: "block",productInfos: "block"
         }
       };
     } else if (query == "banner") {
@@ -114,7 +115,7 @@ module.exports = app => {
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "banner"
+          tableOrc: "banner",productInfos: "block"
         }
       };
     } else if (query == "cavalete") {
@@ -140,7 +141,7 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block"
+          tableOrc: "block",productInfos: "block"
         }
       };
     } else if (query == "outdoor") {
@@ -159,7 +160,7 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block"
+          tableOrc: "block",productInfos: "block"
         }
       };
     } else if (query == "adesivo-comum") {
@@ -178,7 +179,7 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block"
+          tableOrc: "block",productInfos: "block"
         }
       };
     } else if (query == "adesivo-perfurado") {
@@ -198,7 +199,7 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "block"
+          tableOrc: "block",productInfos: "block"
         }
       };
     } else if (query == "logotipo") {
@@ -218,7 +219,7 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "block",
           tableCards: "none",
-          tableOrc: "none"
+          tableOrc: "none",productInfos: "block"
         }
       };
     } else if (query == "arte-digital") {
@@ -238,7 +239,7 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "block",
           tableCards: "none",
-          tableOrc: "none"
+          tableOrc: "none",productInfos: "block"
         }
       };
     } else if (query == "impressora-plotter") {
@@ -258,7 +259,7 @@ OBS: duas estruturas metálicas, lona frente e verso
         itens: {
           basicInfos: "none",
           tableCards: "none",
-          tableOrc: "none"
+          tableOrc: "none",productInfos: "block"
         }
       };
     }

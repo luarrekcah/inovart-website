@@ -1816,7 +1816,7 @@
             <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
             <li><a class="nav-link scrollto" href="#services">Serviços</a></li>
             <li>
-              <a class="nav-link scrollto " href="/portfolio">Portfólio</a>
+              <a class="nav-link scrollto" href="/portfolio">Portfólio</a>
             </li>
             <li><a class="nav-link scrollto" href="#pricing">Valores</a></li>
             <li class="dropdown">
@@ -1915,7 +1915,7 @@
 
             <div class="col-lg-4">
               <div class="portfolio-info">
-                <div >
+                <div style="display: <%=itens.productInfos %>">
                   <h3>Informações de produto</h3>
                   <ul>
                     <li><strong>Categoria</strong>: <%= category %></li>
@@ -1924,8 +1924,8 @@
                   </ul>
                 </div>
                 <!--cartao visita -->
-                <div style="display:<%=itens.tableCards %>">
-                  <table class="table" style="display:table; width:100%;">
+                <div style="display: <%=itens.tableCards %>">
+                  <table class="table" style="display: table; width: 100%">
                     <thead>
                       <tr>
                         <th scope="col">Quant.</th>
@@ -1963,10 +1963,23 @@
                     `;
                     }
                   </script>
+                  <div
+                    class="form-floating"
+                    style="padding-left: 5px; margin-bottom: 20px"
+                  >
+                    <select
+                      class="form-select"
+                      id="catCard"
+                      aria-label="Tipo de produto"
+                    >
+                      <option selected="Cartão de Visita X">Cartão de Visita X</option>
+                    </select>
+                    <label for="floatingSelect">Categoria:</label>
+                  </div>
 
                   <div
                     class="form-floating"
-                    style="padding-left: 5px; margin-bottom: 20px;"
+                    style="padding-left: 5px; margin-bottom: 20px"
                   >
                     <select
                       class="form-select"
@@ -1977,10 +1990,24 @@
                     </select>
                     <label for="floatingSelect">Material:</label>
                   </div>
+                  
+                  <div
+                    class="form-floating"
+                    style="padding-left: 5px; margin-bottom: 20px"
+                  >
+                    <select
+                      class="form-select"
+                      id="corCard"
+                      aria-label="Tipo de produto"
+                    >
+                      <option selected="XXX">XXX</option>
+                    </select>
+                    <label for="floatingSelect">Cor:</label>
+                  </div>
 
                   <div
                     class="form-floating"
-                    style="padding-left: 5px; margin-bottom: 20px;"
+                    style="padding-left: 5px; margin-bottom: 20px"
                   >
                     <select
                       class="form-select"
@@ -1994,7 +2021,7 @@
 
                   <div
                     class="form-floating"
-                    style="padding-left: 5px; margin-bottom: 20px;"
+                    style="padding-left: 5px; margin-bottom: 20px"
                   >
                     <select
                       class="form-select"
@@ -2004,6 +2031,20 @@
                       <option selected="8cm X 5cm">8cm X 5cm</option>
                     </select>
                     <label for="floatingSelect">Tamanho:</label>
+                  </div>
+                  
+                  <div
+                    class="form-floating"
+                    style="padding-left: 5px; margin-bottom: 20px"
+                  >
+                    <select
+                      class="form-select"
+                      id="acabInCard"
+                      aria-label="Tipo de produto"
+                    >
+                      <option selected="Cantos X">Cantos X</option>
+                    </select>
+                    <label for="floatingSelect">Acabamento Incluso:</label>
                   </div>
                 </div>
                 <!--cartao visita -->
@@ -2017,9 +2058,7 @@
                   <div class="container">
                     <div class="row" data-aos="fade-up">
                       <!--Simulador e botão de pedido-->
-                      <h2>
-                        Orçamento aproximado por medida
-                      </h2>
+                      <h2>Orçamento aproximado por medida</h2>
                       <p>
                         Obs: o resultado abaixo é o valor mais próximo ao valor
                         final, entre em contato para pedir um orçamento exato. É
@@ -2032,19 +2071,19 @@
                           aria-label="Tipo de produto"
                           id="selectProductType"
                         >
-                          <option selected class="fachada"
-                            >Lona e Ferro (fachada completa)</option
-                          >
+                          <option selected class="fachada">
+                            Lona e Ferro (fachada completa)
+                          </option>
                           <option class="banner" value="1">Banner</option>
                           <option class="adesivo" value="2">Adesivo</option>
                           <option class="perfurado" value="3">Perfurado</option>
                           <option class="fachada" value="4">Lona</option>
-                          <option class="cavalete" value="5"
-                            >Cavalete simples</option
-                          >
-                          <option class="cavalete" value="6"
-                            >Cavalete duplo</option
-                          >
+                          <option class="cavalete" value="5">
+                            Cavalete simples
+                          </option>
+                          <option class="cavalete" value="6">
+                            Cavalete duplo
+                          </option>
                         </select>
                         <label for="floatingSelect"
                           >Selecione o tipo de produto:</label
@@ -2116,7 +2155,7 @@
                 <button
                   type="button"
                   class="btn btn-success"
-                  style="width:100%"
+                  style="width: 100%"
                   id="fzrPedido"
                 >
                   Fazer pedido
@@ -2168,8 +2207,13 @@
           >. All Rights Reserved
         </div>
         <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>  Distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a> and backend developed by <a href="https://www.raulrodrigues.tk">Raul Rodrigues</a>
-      </div>
+          Designed by
+          <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+          Distributed by
+          <a href="https://themewagon.com/" target="_blank">Themewagon</a> and
+          backend developed by
+          <a href="https://www.raulrodrigues.tk">Raul Rodrigues</a>
+        </div>
       </div>
     </footer>
     <!-- End Footer -->
@@ -2201,7 +2245,7 @@
        * License: https://bootstrapmade.com/license/
        */
 
-      (function() {
+      (function () {
         "use strict";
 
         /**
@@ -2223,7 +2267,7 @@
           let selectEl = select(el, all);
           if (selectEl) {
             if (all) {
-              selectEl.forEach(e => e.addEventListener(type, listener));
+              selectEl.forEach((e) => e.addEventListener(type, listener));
             } else {
               selectEl.addEventListener(type, listener);
             }
@@ -2243,7 +2287,7 @@
         let navbarlinks = select("#navbar .scrollto", true);
         const navbarlinksActive = () => {
           let position = window.scrollY + 200;
-          navbarlinks.forEach(navbarlink => {
+          navbarlinks.forEach((navbarlink) => {
             if (!navbarlink.hash) return;
             let section = select(navbarlink.hash);
             if (!section) return;
@@ -2263,7 +2307,7 @@
         /**
          * Scrolls to an element with header offset
          */
-        const scrollto = el => {
+        const scrollto = (el) => {
           let header = select("#header");
           let offset = header.offsetHeight;
 
@@ -2274,7 +2318,7 @@
           let elementPos = select(el).offsetTop;
           window.scrollTo({
             top: elementPos - offset,
-            behavior: "smooth"
+            behavior: "smooth",
           });
         };
 
@@ -2317,7 +2361,7 @@
         /**
          * Mobile nav toggle
          */
-        on("click", ".mobile-nav-toggle", function(e) {
+        on("click", ".mobile-nav-toggle", function (e) {
           select("#navbar").classList.toggle("navbar-mobile");
           this.classList.toggle("bi-list");
           this.classList.toggle("bi-x");
@@ -2329,7 +2373,7 @@
         on(
           "click",
           ".navbar .dropdown > a",
-          function(e) {
+          function (e) {
             if (select("#navbar").classList.contains("navbar-mobile")) {
               e.preventDefault();
               this.nextElementSibling.classList.toggle("dropdown-active");
@@ -2344,7 +2388,7 @@
         on(
           "click",
           ".scrollto",
-          function(e) {
+          function (e) {
             if (select(this.hash)) {
               e.preventDefault();
 
@@ -2380,7 +2424,7 @@
           if (portfolioContainer) {
             let portfolioIsotope = new Isotope(portfolioContainer, {
               itemSelector: ".portfolio-item",
-              layoutMode: "fitRows"
+              layoutMode: "fitRows",
             });
 
             let portfolioFilters = select("#portfolio-flters li", true);
@@ -2388,17 +2432,17 @@
             on(
               "click",
               "#portfolio-flters li",
-              function(e) {
+              function (e) {
                 e.preventDefault();
-                portfolioFilters.forEach(function(el) {
+                portfolioFilters.forEach(function (el) {
                   el.classList.remove("filter-active");
                 });
                 this.classList.add("filter-active");
 
                 portfolioIsotope.arrange({
-                  filter: this.getAttribute("data-filter")
+                  filter: this.getAttribute("data-filter"),
                 });
-                portfolioIsotope.on("arrangeComplete", function() {
+                portfolioIsotope.on("arrangeComplete", function () {
                   AOS.refresh();
                 });
               },
@@ -2411,7 +2455,7 @@
          * Initiate portfolio lightbox
          */
         const portfolioLightbox = GLightbox({
-          selector: ".portfolio-lightbox"
+          selector: ".portfolio-lightbox",
         });
 
         /**
@@ -2422,13 +2466,13 @@
           loop: true,
           autoplay: {
             delay: 5000,
-            disableOnInteraction: false
+            disableOnInteraction: false,
           },
           pagination: {
             el: ".swiper-pagination",
             type: "bullets",
-            clickable: true
-          }
+            clickable: true,
+          },
         });
 
         /**
@@ -2439,14 +2483,14 @@
           loop: true,
           autoplay: {
             delay: 5000,
-            disableOnInteraction: false
+            disableOnInteraction: false,
           },
           slidesPerView: "auto",
           pagination: {
             el: ".swiper-pagination",
             type: "bullets",
-            clickable: true
-          }
+            clickable: true,
+          },
         });
 
         /**
@@ -2457,7 +2501,7 @@
             duration: 1000,
             easing: "ease-in-out",
             once: true,
-            mirror: false
+            mirror: false,
           });
         });
       })();
@@ -2468,7 +2512,7 @@
         larg = document.getElementById("larg"),
         alt = document.getElementById("alt");
 
-      const showOnly = className => {
+      const showOnly = (className) => {
         const select = document.getElementById("floatingSelect");
         for (let i = 0; i < select.children.length; i++) {
           if (select.children[i].className != className) {
@@ -2580,7 +2624,8 @@
         const checked = getCheckedValue();
         const produto = getProductType();
 
-        if (getProductType() == "cv" && checked == undefined) return alert("Selecione uma quantidade de cartões.");
+        if (getProductType() == "cv" && checked == undefined)
+          return alert("Selecione uma quantidade de cartões.");
 
         if (produto == "cv") {
           if (checked == "undefined")
