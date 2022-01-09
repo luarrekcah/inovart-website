@@ -262,7 +262,26 @@ OBS: duas estruturas metálicas, lona frente e verso
           tableOrc: "none",productInfos: "block"
         }
       };
-    }
+    } else if (query == "cracha") {
+      return {
+        name: "Crachá",
+        photos: [
+          "https://m.media-amazon.com/images/I/818P+qYvSHS._AC_SX300_SY300_.jpg"
+        ],
+        category: "Other",
+        titleValue: "Valor Crachá",
+        value: "R$" + defaultValues.flyer,
+        source: "Tipo",
+        sourceDesc: "Artes digitais gerais",
+        details: "Entre em contato para realizar um orçamento",
+        floatingLabel:
+          "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
+        itens: {
+          basicInfos: "none",
+          tableCards: "none",
+          tableOrc: "none",productInfos: "block"
+        }
+      };
   };
 
   app.get("/produto/tipo/:type", (req, res) => {

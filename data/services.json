@@ -34,6 +34,21 @@
       "name": "Adesivo Perfurado",
       "desc": "Utilizado geralmente em vidros de automóveis e estabelecimentos",
       "link": "/produto/tipo/adesivo-perfurado"
+    },
+    {
+      "name": "Crachá",
+      "desc": "Para identificação de funcionários em função",
+      "link": "/produto/tipo/cracha"
+    },
+    {
+      "name": "Sacola",
+      "desc": "Sacolas personalizadas para lojas",
+      "link": "/produto/tipo/sacola"
+    },
+    {
+      "name": "Bloco de anotação",
+      "desc": "Blocos de anotação personalizados",
+      "link": "/produto/tipo/bloco"
     }
     
   ]
