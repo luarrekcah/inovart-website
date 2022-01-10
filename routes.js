@@ -340,11 +340,53 @@ OBS: duas estruturas metálicas, lona frente e verso
       return {
         name: "Imã",
         photos: [
-          "https://cdn.atualcard.com.br/arquivos/menu/normais/bloco-anotacoes-sulfite-90g-487x296-.png",
+          "https://www.raizler.com.br/medias/2021/07/Ima-de-geladeira-para-delivery-mid.jpg",
         ],
         category: "Other",
         titleValue: "Valor UNID imã",
         value: "R$" + defaultValues.ima,
+        source: "Tipo",
+        sourceDesc: "Personalizado",
+        details: "Entre em contato para realizar um orçamento",
+        floatingLabel:
+          "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
+        itens: {
+          basicInfos: "none",
+          tableCards: "none",
+          tableOrc: "none",
+          productInfos: "block",
+        },
+      };
+    } else if (query == "cobre-placa") {
+      return {
+        name: "Cobre Placa",
+        photos: [
+          "https://http2.mlstatic.com/D_NQ_NP_883555-MLB44397028220_122020-O.webp",
+        ],
+        category: "Other",
+        titleValue: "Valor m²",
+        value: "R$" + defaultValues.cobrePlaca,
+        source: "Tipo",
+        sourceDesc: "Personalizado",
+        details: "Entre em contato para realizar um orçamento",
+        floatingLabel:
+          "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
+        itens: {
+          basicInfos: "none",
+          tableCards: "none",
+          tableOrc: "none",
+          productInfos: "block",
+        },
+      };
+    }else if (query == "fachada-acm") {
+      return {
+        name: "Fachada ACM",
+        photos: [
+          "https://inovepg.com.br/wp-content/uploads/2020/07/1-FACHADA-1.png",
+        ],
+        category: "Other",
+        titleValue: "Valor m²",
+        value: "R$" + defaultValues.cobrePlaca,
         source: "Tipo",
         sourceDesc: "Personalizado",
         details: "Entre em contato para realizar um orçamento",
