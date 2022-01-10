@@ -49,6 +49,21 @@
       "name": "Bloco de anotação",
       "desc": "Blocos de anotação personalizados",
       "link": "/produto/tipo/bloco"
+    },
+    {
+      "name": "Imãs",
+      "desc": "Imãs personalizados",
+      "link": "/produto/tipo/ima"
+    },
+    {
+      "name": "Cobre Placa",
+      "desc": "Cobre Placa personalizados",
+      "link": "/produto/tipo/cobre-placa"
+    },
+    {
+      "name": "Fachada em ACM",
+      "desc": "Fachada ACM personalizados",
+      "link": "/produto/tipo/fachada-acm"
     }
     
   ]

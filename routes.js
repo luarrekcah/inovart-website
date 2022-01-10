@@ -84,7 +84,7 @@ module.exports = (app) => {
       return {
         name: "Fachada",
         photos: [
-          "https://img.freepik.com/psd-gratuitas/maquete-de-outdoor-vertical-de-grande-escala-minima_53876-65947.jpg?size=626&ext=jpg",
+          "https://inovepg.com.br/wp-content/uploads/2020/07/2-FACHADA-LONA-1.png",
         ],
         category: "Fachada",
         titleValue: "Valor do m² com estrutura",
@@ -228,7 +228,7 @@ OBS: duas estruturas metálicas, lona frente e verso
           basicInfos: "block",
           tableCards: "none",
           tableOrc: "none",
-          productInfos: "block",
+          productInfos: "none",
         },
       };
     } else if (query == "arte-digital") {
@@ -324,6 +324,27 @@ OBS: duas estruturas metálicas, lona frente e verso
         category: "Other",
         titleValue: "Valor UNID bloco",
         value: "R$" + defaultValues.bloco,
+        source: "Tipo",
+        sourceDesc: "Personalizado",
+        details: "Entre em contato para realizar um orçamento",
+        floatingLabel:
+          "Insira abaixo a descrição do que precisa ou de quantas artes deseja fazer",
+        itens: {
+          basicInfos: "none",
+          tableCards: "none",
+          tableOrc: "none",
+          productInfos: "block",
+        },
+      };
+    } else if (query == "ima") {
+      return {
+        name: "Imã",
+        photos: [
+          "https://cdn.atualcard.com.br/arquivos/menu/normais/bloco-anotacoes-sulfite-90g-487x296-.png",
+        ],
+        category: "Other",
+        titleValue: "Valor UNID imã",
+        value: "R$" + defaultValues.ima,
         source: "Tipo",
         sourceDesc: "Personalizado",
         details: "Entre em contato para realizar um orçamento",
