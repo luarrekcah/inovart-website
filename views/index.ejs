@@ -277,7 +277,11 @@
 <section id="pricing" class="pricing section-bg">
   <div class="container">
     <div class="section-title" data-aos="fade-up">
-      <h2>Orçamento</h2>
+      <div class="row" style="text-align: center;">
+           <div class="col-lg-6 aos-init aos-animate">
+               <img src="https://cdn.glitch.global/a81e3a0e-1158-4a11-bdef-9d223f8f0432/orcamento.png?v=1641940483283" class="img-fluid" alt="" />
+            </div>
+          </div>
       <p>
         Logo abaixo você pode fazer uma simulação do tipo de produto que deseja
         e realizar o pedido.
@@ -444,6 +448,9 @@
 <!-- End #main -->
 
 <script>
+
+document.getElementsByClassName("filter-active")[0].click();
+
   document.getElementById("contactSend").addEventListener("click", () => {
     if (
       document.getElementById("name").value == "" ||
